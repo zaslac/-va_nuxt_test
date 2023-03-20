@@ -1,0 +1,50 @@
+.cookie_popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  padding: 32px;
+  max-width: 530px;
+  border-radius: 24px 24px 0 0;
+  display: none;
+  z-index: 9999999;
+
+  @media (min-width: $screen-md) {
+    left: 24px;
+    bottom: 24px;
+    border-radius: 24px;
+  }
+
+  .cookie_title {
+    margin-bottom: 18px;
+    @include font(600,16,100%);
+    color: #252525;
+
+    @media (min-width: $screen-md) {
+      @include font(600,20,100%);
+    }
+
+    svg {
+      max-width: 24px;
+      margin-right: 18px;
+      margin-bottom: -4px;
+    }
+
+  }
+
+  .cookie_content {
+    margin-bottom: 24px;
+    @include font(400,16,150%);
+    color: #252525;
+  }
+
+  .btn_group {
+    justify-content: left;
+
+    .btn {
+      padding: 12px 24px;
+    }
+
+  }
+
+}

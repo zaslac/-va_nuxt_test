@@ -1,0 +1,229 @@
+.nav-up {
+  .nav_mobile_wrapper {
+    transform: translateY(-80px);
+  }
+
+  .nav_desktop_wrapper {
+    transform: translateY(-37px);
+    background: rgba(54, 54, 54, 0.56);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  //   &.nav-up {
+  //     &.has_notice_area {
+  //       transform: translateY(-128px);
+  //       @media (min-width: $screen-md) {
+  //         transform: translateY(-86px);
+  //       }
+  //     }
+  //   }
+}
+
+.nav-down {
+  .nav_mobile_wrapper {
+    transform: translateY(0px);
+    background: rgba(54, 54, 54, 0.56);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav_desktop_wrapper {
+    transform: translateY(0px);
+    background: rgba(54, 54, 54, 0.56);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+.nav_dark_bg {
+  .nav_desktop_wrapper {
+    background: $black;
+  }
+}
+
+.nav-hover {
+  .map_search_bar {
+    .search_result_table {
+      h4 {
+        color: $black;
+      }
+      .no_result_text {
+        color: $black;
+      }
+
+      .citem {
+        strong {
+          color: $black;
+        }
+
+        &:hover {
+          strong {
+            color: $red;
+          }
+        }
+      }
+      &.no_results {
+        .location_list {
+          a {
+            color: $black;
+            font-weight: 600;
+
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+
+    .search_panel {
+      background: #f8f8f8;
+
+      .icon_wrap .icon {
+        svg {
+          path {
+            stroke: $black;
+          }
+        }
+      }
+
+      .search_area {
+        input {
+          color: $black;
+          &::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: $black !important;
+          }
+          &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $black !important;
+          }
+          & :-ms-input-placeholder {
+            /* IE 10+ */
+            color: $black !important;
+          }
+          &:-moz-placeholder {
+            /* Firefox 18- */
+            color: $black !important;
+          }
+        }
+      }
+    }
+  }
+
+  .use_location_button {
+    color: $black !important;
+
+    .icon {
+      circle,
+      path {
+        stroke: $black !important;
+      }
+    }
+
+    &:hover {
+      color: $red !important;
+      .icon {
+        circle,
+        path {
+          stroke: $red !important;
+        }
+      }
+    }
+  }
+}
+
+.form_page_nav {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: ease all 0.3s;
+  transform: translateY(0px);
+  @media (min-width: $screen-md) {
+    top: 80px;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $screen-md) {
+      justify-content: flex-start;
+    }
+  }
+
+  .site_logo {
+    width: 100%;
+    max-width: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: ease all 0.3s;
+    }
+
+    .light_logo {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+
+    .dark_logo {
+      display: none;
+    }
+  }
+
+  &.nav_dark_bg {
+    .light_logo {
+      display: none;
+    }
+
+    .dark_logo {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      display: flex;
+    }
+  }
+}
+
+.blurred_nav {
+  .nav_desktop_wrapper,
+  .nav_mobile_wrapper {
+    background: rgba(54, 54, 54, 0.56);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+.has_notice_area {
+  .nav_mobile_wrapper {
+    transform: translateY(47px);
+  }
+
+  .nav-up .nav_mobile_wrapper {
+    transform: translateY(-80px);
+  }
+
+  .nav-down .nav_mobile_wrapper {
+    transform: translateY(0px);
+  }
+
+  .nav_desktop_wrapper {
+    transform: translateY(48px);
+  }
+
+  .nav-up .nav_desktop_wrapper {
+    transform: translateY(-37px);
+  }
+
+  .nav-down .nav_desktop_wrapper {
+    transform: translateY(0px);
+  }
+}

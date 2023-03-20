@@ -1,0 +1,99 @@
+.tow_col_video_component {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 200px;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
+  .content_holder {
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: $screen-md) {
+     max-width: 50%;
+    }
+
+    h2 {
+      @include h2();
+      font-size: 64px;
+      line-height: 64px;
+      color: #fff;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .intro {
+      @include font(350,20, 150%);
+      color: #fff;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
+    .content {
+      @include font(325,16, 150%);
+      color: #D3D3D3;
+      text-align: left;
+    }
+
+
+  }
+
+  .video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      max-width: 50%;
+    }
+
+    position: relative;
+
+    video {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+
+    .video-thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      &:before {
+        content: url('/img/icons/small-play.png');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        vertical-align: middle;
+        padding-top: 150px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      &:hover {
+
+        &:before {
+          transform: scale(1.1);
+        }
+
+      }
+
+    }
+
+  }
+
+}

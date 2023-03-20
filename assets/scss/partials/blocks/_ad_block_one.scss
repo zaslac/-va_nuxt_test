@@ -1,0 +1,155 @@
+.ad_block_one {
+  display: flex;
+  background: #2E2E2E;
+  border-radius: 24px;
+  margin-bottom: 160px;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    //max-width: 50%;
+    max-height: 335px;
+    flex-direction: row;
+  }
+
+
+  .column{
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: $screen-md) {
+      max-width: 50%;
+    }
+
+  }
+
+  .content-column {
+    padding: 40px 24px;
+    order: 2;
+
+    @media (min-width: $screen-md) {
+      padding: 48px 44px;
+      order:1;
+    }
+
+    .intro {
+      display: flex;
+      margin-bottom: 24px;
+      flex-direction: column;
+
+      @media (min-width: $screen-md) {
+       flex-direction: row;
+      }
+
+      .icon {
+        max-width: 50px;
+        margin-right: 20px;
+        margin-bottom: 24px;
+
+        @media (min-width: $screen-md) {
+          margin-bottom: unset;
+        }
+
+      }
+
+      .title {
+        @include h4();
+        text-align: left;
+        font-size: 32px;
+        line-height: 32px;
+
+        @media (min-width: $screen-md) {
+
+        }
+
+      }
+
+    }
+
+    .top_content {
+      @include font(400, 16, 150%);
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .list {
+      margin-bottom: 24px;
+
+      li {
+        @include font(400, 16, 150%);
+        letter-spacing: -0.03em;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .icon {
+          width: 100%;
+          max-width: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 12px;
+        }
+
+      }
+
+    }
+
+    .bottom_content {
+      @include font(400, 14, 150%);
+      letter-spacing: -0.03em;
+      color: #7C7C7C;
+      text-align: left;
+      margin-bottom: 24px;
+
+        strong {
+          background: #E10A0A;
+          padding: 3px;
+          border-radius: 4px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 100%;
+          font-weight: 900;
+          margin: 0 8px;
+
+          @media (min-width: $screen-md) {
+            padding: 4px 8px 4px;
+          }
+
+        }
+
+    }
+
+  }
+
+  .image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+    padding: 40px 24px;
+
+    @media (min-width: $screen-md) {
+      padding: unset;
+      order:2;
+    }
+
+    img {
+      width: 100%;
+      max-height: unset;
+
+      @media (min-width: $screen-md) {
+        width: auto;
+        max-height: 300px;
+      }
+
+    }
+
+  }
+
+}
+
+

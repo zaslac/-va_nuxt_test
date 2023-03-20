@@ -1,0 +1,138 @@
+.footer_newsletter_form {
+  border-top: 2px solid #2E2E2E;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
+  .content {
+    flex: 1;
+
+    .title {
+      font-weight: 450;
+      font-size: 12px;
+      line-height: 170%;
+      text-transform: uppercase;
+      color: #FFF;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      font-weight: 450;
+      font-size: 14px;
+      line-height: 150%;
+      color: #7C7C7C;
+    }
+
+  }
+
+  .form {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+
+    .focused_form {
+      border-bottom: 2px solid rgba(255, 255, 255, 1) !important;
+    }
+
+    #footer_newsletter_form {
+      padding-top: 40px;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        max-width: 360px;
+      }
+      form {
+        display: flex;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+        border-radius: 1px;
+        padding-bottom: 8px;
+        position: relative;
+      }
+
+      .hs_email {
+        width: 100%;
+        position: relative;
+
+        &.focused,
+        &.focused_value {
+          label {
+            color: $grey;
+            font-size: 12px;
+            line-height: 18px;
+            top: -12px;
+          }
+        }
+
+        input {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border: none;
+          box-shadow: none;
+          outline: none;
+          background: none;
+          font-weight: 350;
+          font-size: 16px;
+          line-height: 150%;
+          color: #fff;
+        }
+
+        label {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          @include font(400, 16, 24px);
+          color: #fff;
+          letter-spacing: -0.03em;
+          transition: ease all 0.3s;
+        }
+      }
+
+      .hs_submit {
+        position: absolute;
+        right: 0;
+        bottom: 8px;
+        input {
+          margin: 0;
+          padding: 0;
+          outline: none;
+          box-shadow: none;
+          border: none;
+          @include font(600, 16, 24px);
+          color: #d3d3d3;
+          letter-spacing: -0.06em;
+          background: none;
+        }
+      }
+
+      .no-list {
+        position: absolute;
+        bottom: -34px;
+        width: 100%;
+        display: flex;
+        min-height: 26px;
+
+        &.hs-error-msgs {
+          border-top: 2px solid $red;
+
+          .hs-error-msg {
+            @include font(400, 12, 150%);
+            color: $black;
+            top: 0;
+          }
+        }
+      }
+
+      .submitted-message {
+        @include font(400, 12, 150%);
+        color: #21a66c;
+      }
+    }
+  }
+
+}

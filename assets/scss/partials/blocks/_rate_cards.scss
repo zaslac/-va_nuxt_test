@@ -1,0 +1,93 @@
+.section_rate_cards {
+  overflow: hidden;
+
+  .rate_cards {
+    margin-bottom: 200px;
+
+    .section_title {
+
+      p {
+
+        br {
+          display: none;
+
+          @media (min-width: $screen-md) {
+            display: block;
+          }
+
+        }
+
+
+
+      }
+
+    }
+
+
+    .rate_cards_list {
+      display: flex;
+      gap: 32px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      .rate_card {
+        width: 100%;
+        padding: 3px;
+        border-radius: 21px;
+        position: relative;
+        height: auto;
+        display: flex;
+
+        .card_content {
+          background: #2E2E2E;
+          border-radius: 21px;
+          padding: 24px;
+          position: relative;
+          @media (min-width: $screen-md) {
+            height: 100%;
+          }
+
+          img {
+            max-width: 42px;
+            margin-bottom: 42px;
+          }
+
+          .title {
+            @include font(500, 20, 100%);
+            color: #fff;
+            margin-bottom: 24px;
+            text-align: left;
+          }
+
+          .description {
+            @include font(500, 16, 150%);
+            color: #fff;
+            margin-bottom: 104px;
+          }
+
+          .rate {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            @include font(350, 12, 150%);
+            color: rgba(255, 255, 255, 0.8);
+
+            span {
+              @include font(400, 32, 100%);
+              color: #fff;
+              font-weight: bold;
+              text-transform: uppercase;
+              margin-top: 4px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

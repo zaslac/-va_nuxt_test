@@ -1,0 +1,27 @@
+.single_blog_meta {
+  margin-bottom: 24px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  .author {
+    @include font(800, 16, 16px);
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+  }
+
+  .published_date {
+    @include font(800, 16, 16px);
+    color: rgba(255, 255, 255, 0.64);
+    text-transform: uppercase;
+  }
+}

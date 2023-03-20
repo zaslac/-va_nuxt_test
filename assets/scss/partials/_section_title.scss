@@ -1,0 +1,47 @@
+.section_title {
+  margin-bottom: 80px;
+
+  h5 {
+    @include h5();
+  }
+
+  .small_title {
+    @include h5();
+  }
+
+  h2,
+  h3 {
+    @include font(800, 48, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+      line-height: 64px;
+
+      br {
+        display: block;
+      }
+
+    }
+
+  }
+
+  p {
+    @include p();
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto 16px;
+  }
+
+  p.nb_text {
+    @include font(400, 16, 150%);
+    color: $grey;
+  }
+}

@@ -1,0 +1,20 @@
+.map_list_cta {
+  position: fixed;
+  bottom: 24px;
+  width: 100%;
+  z-index: 9;
+
+  .btn {
+    display: flex;
+    padding: 18px 25px;
+  }
+
+  .icon {
+    width: 100%;
+    max-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+  }
+}

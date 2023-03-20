@@ -1,0 +1,29 @@
+.blog_related_posts {
+  padding: 160px 0 80px;
+
+  .blog_article_main {
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  .blog_item_card {
+    @media (min-width: $screen-md) {
+     margin-bottom: 0 !important;
+    }
+  }
+
+  .article {
+    width: 100%;
+    position: relative;
+    @media (min-width: $screen-md) {
+      max-width: calc(33.333% - 40px);
+      margin: 0 20px;
+    }
+  }
+}
+
+
+.related_posts_component {
+  padding: 0;
+}

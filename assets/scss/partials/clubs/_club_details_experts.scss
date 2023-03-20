@@ -1,0 +1,215 @@
+.club_details_experts {
+  background: $black;
+  padding: 80px 0;
+  @media (min-width: $screen-md) {
+    padding: 160px 0 160px;
+  }
+
+  h5 {
+    @include h5();
+  }
+
+  h2 {
+    @include h2();
+    margin-bottom: 40px;
+  }
+
+  p {
+    @include p();
+    margin-bottom: 42px;
+    @media (min-width: $screen-md) {
+      max-width: 640px;
+      margin: 0 auto 80px;
+    }
+  }
+
+  p.small {
+    @include font(325, 14, 150%);
+    color: $grey2;
+    padding-top: 34px;
+    margin-bottom: 0;
+  }
+
+  .experts_list_mobile {
+    .expert {
+      background: linear-gradient(
+          98.79deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(255, 255, 255, 0) 35.82%
+        ),
+        #2e2e2e;
+      border-radius: 16px;
+      display: flex;
+      padding: 24px;
+      margin-bottom: 16px;
+      @include font(800, 24, 24px);
+      color: #fff;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      background: #fff;
+      margin-left: auto;
+      border-radius: 100px;
+
+      svg {
+        max-width: 16px;
+      }
+    }
+  }
+
+  .experts_list_mobile_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 91;
+    background: $black;
+
+    .slide_inner {
+      position: relative;
+    }
+
+    .modal_header {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      button {
+        background: #fff;
+        width: 100%;
+        max-width: 48px;
+        height: 48px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+
+        svg {
+          max-width: 24px;
+        }
+      }
+    }
+
+    .background {
+      position: relative;
+      img {
+        height: 100vh;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      padding: 112px 40px 0;
+    }
+
+    h3 {
+      @include font(800, 32, 32px);
+      color: #fff;
+      letter-spacing: -0.06em;
+      margin-bottom: 24px;
+    }
+
+    p {
+      @include font(350, 18, 27px);
+      color: #fff;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    p.small {
+      margin-top: 0;
+      padding-top: 0;
+      @include font(325, 14, 150%);
+      color: $grey2;
+      margin-bottom: 8px;
+    }
+
+    .list_group {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        @include font(325, 14, 150%);
+        color: $grey2;
+        display: flex;
+        white-space: nowrap;
+        margin-right: 16px;
+        margin-bottom: 8px;
+
+        &:before {
+          content: "";
+          // width: 100%;
+          width: 16px;
+          height: 18px;
+          background-image: url(@/assets/img/list_check.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% auto;
+          display: block;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .btn_group {
+      justify-content: flex-start;
+      margin-top: 32px;
+
+      .btn {
+        padding: 16px 24px;
+      }
+    }
+
+    .arrows {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      display: flex;
+      width: 100%;
+      z-index: 200;
+    }
+
+    .experts_caro_button {
+      width: 100%;
+      max-width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        max-width: 24px;
+
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+    .experts_caro_prev {
+      margin-right: 16px;
+    }
+  }
+}

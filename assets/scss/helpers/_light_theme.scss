@@ -1,0 +1,116 @@
+.light_theme {
+  transition: 0.4s;
+  background: #fff !important;
+
+  .section_title {
+
+    h2 {
+      color: #252525;
+    }
+
+  }
+
+  .testimonials_block {
+
+    .testimonial-content {
+
+      p {
+        color: #252525;
+      }
+
+    }
+
+    .testimonial-name {
+      color: #EB0029 !important;
+    }
+
+    .testimonial_slider {
+
+      .swiper-pagination-bullet {
+        background: #3F3F3F;
+      }
+
+    }
+
+  }
+
+
+  .faq_section {
+
+    .faqs {
+
+      .faq {
+        background: #EEE;
+
+        .question {
+          color: #252525;
+
+          .open {
+            background: #252525;
+
+            svg {
+
+              path {
+                stroke: #fff;
+              }
+
+            }
+
+          }
+
+          .closed {
+            background: #252525;
+
+            svg {
+
+              path {
+                stroke: #fff;
+              }
+
+            }
+
+          }
+
+        }
+
+        .answer {
+          p {
+            color: #252525;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .thin_full_width_image_cta {
+
+    h2 {
+      color: #252525;
+    }
+
+    p {
+      color: #7C7C7C;
+    }
+
+  }
+
+  .large_card_content {
+
+    h3 {
+      color: #252525 !important;
+    }
+
+    .content {
+
+      p {
+        color: #252525;
+      }
+
+    }
+
+  }
+
+}

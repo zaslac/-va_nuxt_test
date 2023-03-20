@@ -1,0 +1,140 @@
+.section_blog_filter {
+  position: relative;
+  z-index: 900;
+}
+.blog_filter_results {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 106px;
+  background: $black;
+  z-index: 3;
+  overflow: auto;
+  transition: ease all 0.3s;
+  @media (min-width: $screen-md) {
+    position: absolute;
+    overflow: visible;
+    top: 103px;
+    background: none;
+    padding-top: 0;
+  }
+
+  .container {
+    padding: 0;
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+  }
+
+  .blog_results_count {
+    padding: 24px;
+    @include font(400, 16, 24px);
+    letter-spacing: -0.03em;
+    color: #fff;
+    border-bottom: 2px solid #3f3f3f;
+    @media (min-width: $screen-md) {
+      padding: 24px 0;
+    }
+
+    &.no_results {
+      border-bottom: 0;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .no_result_text {
+      color: #d3d3d3;
+      padding-top: 8px;
+    }
+  }
+
+  .blog_ressult_wrapper {
+    padding: 0px;
+  }
+
+  .blog_search_item {
+    display: flex;
+    padding: 24px 21px;
+    border-bottom: 2px solid #3f3f3f;
+    transition: ease all 0.3s;
+    @media (min-width: $screen-md) {
+      padding: 18px 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #3f3f3f;
+
+      .title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bitem_image {
+    width: 100%;
+    max-width: 131px;
+    margin-right: 16px;
+    @media (min-width: $screen-md) {
+      max-width: 211px;
+      margin-right: 24px;
+    }
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  .bitem_body {
+    width: 100%;
+    max-width: calc(100% - 131px);
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .category {
+    @include font(700, 14, 14px);
+    color: #fff;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .title {
+    @include font(600, 24, 24px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 16px;
+    transition: ease all 0.3s;
+  }
+
+  .date {
+    @include font(450, 14, 21px);
+    color: rgba(255, 255, 255, 0.64);
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+    }
+  }
+}
+
+.blog_search_underly {
+  @media (min-width: $screen-md) {
+    background: rgba(37, 37, 37, 0.64);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &.dark {
+    @media (min-width: $screen-md) {
+      background: $black;
+    }
+  }
+}

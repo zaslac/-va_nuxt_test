@@ -1,0 +1,45 @@
+.simple_video_block {
+  margin-bottom: 160px;
+  display: flex;
+  position: relative;
+  height: 215px;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 200px;
+    height: 690px;
+  }
+
+  .html_vid {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    video {
+      width: 100%;
+      object-fit: cover;
+      height: 215px;
+      border-radius: 24px;
+
+      @media (min-width: $screen-sm) {
+        height: 690px;
+      }
+
+    }
+
+  }
+
+  iframe {
+    height: 215px;
+    width: 100%;
+    border-radius: 24px;
+    display: block;
+
+    @media (min-width: $screen-sm) {
+      height: 690px;
+    }
+
+  }
+
+}

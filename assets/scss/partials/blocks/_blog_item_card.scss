@@ -1,0 +1,105 @@
+.blog_item_card {
+  margin: 0 0 64px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $screen-md) {
+    margin-bottom: 80px;
+  }
+
+  &:hover {
+    .blog_item_image {
+      background-size: auto 115%;
+      transition: ease all 0.5s;
+    }
+
+    h3 {
+      text-decoration: underline;
+    }
+  }
+
+  .blog_item_image {
+    display: flex;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 44px;
+    background-color: #3f3f3f;
+    transition: ease all 0.3s;
+  }
+
+  .blog_item_meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  .category {
+    display: flex;
+    align-items: center;
+    @include font(600, 16, 16px);
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 16px;
+  }
+
+  .read_time {
+    @include font(450, 16, 24px);
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.64);
+  }
+
+  h3 {
+    @include font(600, 32, 32px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    transition: ease all 0.3s;
+  }
+
+  &.first_feature {
+    @media (min-width: $screen-md) {
+      margin-bottom: 80px;
+    }
+    .blog_item_image {
+      margin-bottom: 40px;
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+    .blog_item_body {
+      @media (min-width: $screen-md) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 48px;
+        background: linear-gradient(
+          180deg,
+          rgba(37, 37, 37, 0) 0%,
+          #252525 100%
+        );
+      }
+
+      h3 {
+        @media (min-width: $screen-md) {
+          font-size: 48px;
+          line-height: 48px;
+          font-weight: 800;
+          width: 100%;
+          max-width: 592px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .btn_group {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

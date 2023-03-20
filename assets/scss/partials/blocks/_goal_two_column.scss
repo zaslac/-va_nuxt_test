@@ -1,0 +1,149 @@
+.goal_two_column_container {
+
+  .goal_column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 160px;
+    align-items: center;
+
+    @media (min-width: $screen-sm) {
+     flex-direction: row;
+      margin-bottom: 200px;
+      gap: 80px;
+    }
+
+    .image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        min-height: 380px;
+        object-fit: cover;
+        border-radius: 24px;
+
+        @media (min-width: $screen-sm) {
+          min-height: 600px;
+        }
+
+      }
+
+    }
+
+    .content {
+      flex: 1;
+
+      .counter {
+        padding: 8px;
+        background-color: #EB0029;
+        @include font(800,48,100%);
+        color: #FFFFFF;
+        display: table;
+        margin: 0 auto 16px auto;
+
+        @media (min-width: $screen-sm) {
+          margin: 0 0 16px 0;
+        }
+
+      }
+
+
+      .title {
+        @include font(800,48,100%);
+        color: #fff;
+        margin-bottom: 24px;
+        text-align: center;
+        letter-spacing: -0.06em;
+
+        @media (min-width: $screen-sm) {
+          text-align: left;
+        }
+
+      }
+
+      .description {
+        @include font(450,18,150%);
+        color: #fff;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @media (min-width: $screen-sm) {
+          text-align: left;
+        }
+      }
+
+      .small_description {
+        @include font(450,14,150%);
+        color: #D3D3D3;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @media (min-width: $screen-sm) {
+          text-align: left;
+        }
+      }
+
+      .btn_group {
+        align-items: center !important;
+        justify-content: center !important;
+
+        @media (min-width: $screen-sm) {
+          justify-content: flex-start !important;
+          align-items: flex-start !important;
+        }
+
+        .btn {
+          padding: 14px 24px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .left {
+
+    .content {
+      order: 0;
+
+      @media (min-width: $screen-sm) {
+        order: 0;
+      }
+
+    }
+
+    .image {
+      order: 1;
+
+      @media (min-width: $screen-sm) {
+        order: 1;
+      }
+
+    }
+
+  }
+
+  .right {
+
+    .content {
+      order: 0;
+
+      @media (min-width: $screen-sm) {
+        order: 1;
+      }
+
+    }
+
+    .image {
+      order: 1;
+
+      @media (min-width: $screen-sm) {
+        order: 0;
+      }
+
+    }
+
+  }
+
+}

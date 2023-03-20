@@ -8,6 +8,21 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.3.1"
+    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
+    "@nuxtjs/device": "^3.0.0",
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/nuxt": "^9.12.0",
+    "nuxt": "^3.2.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^10.4.1"
+  },
+  "dependencies": {
+    "@fawmi/vue-google-maps": "0.9.72",
+    "@gtm-support/vue-gtm": "^2.0.0",
+    "@pinia/nuxt": "^0.4.6",
+    "gsap": "^3.11.3",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.30",
+    "swiper": "^8.4.5"
   }
 }

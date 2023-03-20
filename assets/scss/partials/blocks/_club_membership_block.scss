@@ -1,0 +1,633 @@
+.club_membership_block {
+  margin-bottom: 160px;
+  overflow: hidden;
+  padding-top: 5px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+  }
+
+  .tab_title_holder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+      flex-direction: row;
+    }
+
+    .tab_list_title {
+      background-color: #2E2E2E;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      border-radius: 22px;
+      padding: 5px;
+      cursor: pointer;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        width: unset;
+        padding: 8px;
+      }
+
+      &:before {
+        content: '';
+        z-index: -11;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background: linear-gradient(rgb(75, 75, 75) 0%, rgb(75, 75, 75) 50%, rgba(75, 75, 75, 0.15) 100%);
+        border-radius: 24px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+      }
+
+      .tab_title_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        min-width: unset;
+        flex:1;
+
+        @media (min-width: $screen-md) {
+          min-width: 260px;
+        }
+
+        .title {
+          @include font(600, 14, 100%);
+          color: #7C7C7C;
+          font-weight: bold;
+          margin-bottom: 0;
+
+          @media (min-width: $screen-md) {
+            @include font(600, 20, 100%);
+            margin-bottom: 4px;
+          }
+        }
+
+        .description {
+          @include font(400, 14, 150%);
+          color: #7C7C7C;
+        }
+
+      }
+
+      .inner {
+        padding: 10.5px 7px;
+        border-radius: 15px;
+        transition: 0.4s;
+
+        @media (min-width: $screen-md) {
+          padding: 16px;
+        }
+
+      }
+
+      .active {
+
+
+        &:before {
+          content: '';
+          z-index:4;
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          background: linear-gradient(rgb(75, 75, 75) 0%, rgb(75, 75, 75) 50%, rgba(75, 75, 75, 0.15) 100%);
+          border-radius: 16px;
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+        }
+
+        .inner {
+          background-color: #393939;
+          position: relative;
+          z-index: 6;
+        }
+
+        .title {
+          color: #fff;
+        }
+
+        .description {
+          color: rgba(255, 255, 255, 0.64);
+        }
+
+      }
+
+    }
+
+  }
+
+  .tab_content {
+
+    .single_club_detail {
+      border-radius: 21px;
+      overflow: hidden;
+      max-width: 408px;
+      margin: 40px auto 40px auto;
+
+      &.club-v {
+        background: linear-gradient(
+                        rgb(80, 184, 223) 0%,
+                        rgb(80, 184, 223) 50%,
+                        rgba(80, 184, 223, 0.15) 100%
+        );
+
+        .card_age {
+          background: #50b8df;
+        }
+
+        .title {
+          color: #50b8df;
+        }
+      }
+      &.club-v-max {
+        background: linear-gradient(
+                        rgb(170, 128, 180) 0%,
+                        rgb(170, 128, 180) 50%,
+                        rgba(170, 128, 180, 0.15) 100%
+        );
+
+        .card_age {
+          background: #aa80b4;
+        }
+
+        .title {
+          color: #aa80b4;
+        }
+      }
+    }
+
+    .single_club_card {
+      margin: 4px;
+      background: #2e2e2e;
+      border-radius: 21px;
+      overflow: hidden;
+    }
+
+    .card_image {
+      position: relative;
+
+      .image_shim {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -45px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(46, 46, 46);
+          background: linear-gradient(
+                          180deg,
+                          rgba(46, 46, 46, 0) 0%,
+                          rgba(46, 46, 46, 1) 80%
+          );
+        }
+      }
+    }
+
+    .card_age {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      @include font(700, 14, 14px);
+      color: #fff;
+      padding: 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .card_body {
+      padding: 0 24px 40px;
+      position: relative;
+      z-index: 5;
+
+      .title {
+        @include font(600, 24, 24px);
+        letter-spacing: -0.06em;
+        text-align: left;
+        margin-bottom: 32px;
+      }
+
+      .price {
+        @include font(800, 36, 36px);
+        letter-spacing: -0.06em;
+        text-align: left;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .small {
+          font-size: 14px;
+          line-height: 14px;
+          margin-left: 8px;
+          color: #7c7c7c;
+          text-transform: uppercase;
+        }
+      }
+
+      .highlights {
+        li {
+          display: flex;
+          @include font(500, 16, 24px);
+          letter-spacing: -0.03em;
+          color: #fff;
+          margin-bottom: 16px;
+        }
+
+        .icon {
+          width: 100%;
+          max-width: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 16px;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  .rate_toggle {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 450px) {
+      gap: 24px;
+    }
+
+    .active {
+      color: #fff !important;
+    }
+
+    .monthly {
+      @include font(450,16,100%);
+      color: #7C7C7C;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .anually {
+      @include font(450,16,100%);
+      color: #7C7C7C;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+  }
+
+  .membership_cta {
+    width: 100%;
+    height: 104px;
+    padding: 0 40px;
+    background: linear-gradient(92.93deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #EB0029;
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+
+    .content {
+      @include font(600, 24, 100%);
+      color: #FFFFFF;
+      letter-spacing: -0.06em;
+      width: 100%;
+    }
+
+  }
+
+  .mobile_btn {
+    width: 100%;
+    .btn {
+      width: 100%;
+      padding: 14px 24px;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .popular {
+    background: linear-gradient(rgb(235, 0, 41) 0%, rgb(235, 0, 41) 50%, rgba(235, 0, 41, 0.3) 100%) !important;
+    position: relative;
+    overflow: visible !important;
+
+    &:before {
+      content: url('/img/icons/poptag.svg');
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: -24px;
+    }
+
+  }
+
+  .membership_card {
+    position: relative;
+    border-radius: 21px;
+    overflow: hidden;
+    background: linear-gradient(rgb(97, 97, 97) 0%, rgb(97, 97, 97) 50%, rgba(97, 97, 97, 0.3) 100%);
+    padding: 4px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $screen-md) {
+      flex: 1;
+    }
+
+    .no_rates {
+
+      .no_rate {
+        display: none;
+      }
+
+      .active {
+        display: flex;
+        position: absolute;
+        z-index: 99;
+        background-color: #2E2E2E;
+        border-radius: 17px;
+        top: 4px;
+        left: 4px;
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        padding: 40px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        font-weight: 450;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+        text-align: center;
+      }
+
+    }
+
+    .inner_content {
+      border-radius: 17px;
+      background-color: #2E2E2E;
+      padding: 40px 24px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        padding: 40px;
+      }
+
+      .title {
+        @include font(600,24,100%);
+        color: #fff;
+        margin-bottom: 32px;
+      }
+
+      .content {
+        font-size: 16px;
+        @include font(450,16px, 150%);
+        color: #fff;
+        letter-spacing: -0.03em;
+      }
+
+      .active {
+        display: block !important;
+      }
+
+      .rate {
+        font-size: 36px;
+        line-height: 100%;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 16px;
+        display: none;
+
+        @media (min-width: $screen-md) {
+          font-size: 48px;
+          line-height: 100%;
+          font-weight: bold;
+        }
+
+        span {
+          @include font(450,14px, 100%);
+          font-size: 14px !important;
+          text-transform: uppercase;
+          color: #7c7c7c;
+          font-weight: bold;
+        }
+
+      }
+
+      .rate_item {
+        display: flex;
+
+        .left {
+          @include font(325,16,150%);
+          color: #fff;
+        }
+
+        .rate {
+          @include font(450, 32, 100%);
+          color: #fff;
+        }
+
+      }
+
+      .btn_group {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        width: calc(100% - 40px);
+        justify-content : unset;
+
+        .btn {
+          width: calc(100% - 40px);
+        }
+
+      }
+
+      .rate_list {
+        margin-bottom: 32px;
+
+        .rate_item {
+          align-items: center;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3F3F3F;
+          }
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+
+            &:after {
+              content: none;
+            }
+          }
+
+          .left {
+            flex: 1;
+          }
+
+          .right {
+
+            .rate {
+              margin-bottom: 0;
+            }
+
+          }
+
+        }
+
+      }
+
+      ul {
+        margin-top: 16px;
+
+        li {
+          @include font(400, 16, 150%);
+          letter-spacing: -0.03em;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          .icon {
+            width: 100%;
+            max-width: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .slide_pagination {
+    margin-top: 28px;
+    margin-bottom: 40px;
+
+    .arrows {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .caro_button {
+      width: 100%;
+      display: flex;
+      max-width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 100px;
+      align-items: center;
+      justify-content: center;
+      transition: ease all 0.3s;
+
+      svg {
+        max-width: 24px;
+      }
+    }
+
+    .caro_prev {
+      margin-right: 16px;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.1;
+    }
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3F3F3F;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #EB0029;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #3F3F3F;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+}

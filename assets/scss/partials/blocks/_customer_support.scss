@@ -1,0 +1,101 @@
+.customer_support {
+  margin-bottom: 160px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+  }
+
+  .locations {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      max-width: 800px;
+      margin: 0 auto 80px auto;
+    }
+
+    .location {
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+
+      &:nth-child(2){
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-md) {
+        max-width: 50%;
+        margin-bottom: unset;
+      }
+
+      .icon {
+        max-width: 48px;
+        margin: 0 auto 27px auto;
+      }
+
+      .title  {
+        @include h4();
+        color:#fff;
+        margin-bottom: 24px;
+      }
+
+      .number {
+        @include font(350, 20, 150%);
+        color: #fff;
+        padding-bottom: 3px;
+      }
+
+    }
+
+  }
+
+  .call_centre_hours_holder {
+    text-align: center;
+
+    h4 {
+      @include h4();
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .call_centre_hours {
+
+      .call_centre_data {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        flex-direction: column;
+
+        @media (min-width: $screen-md) {
+          flex-direction: row;
+        }
+
+        .day {
+          @include font(325, 20, 150%);
+          color: rgba(255, 255, 255, 0.64);
+        }
+
+        .time {
+          @include font(350, 20,150%);
+          color: #fff;
+        }
+
+      }
+
+    }
+
+    .support_text {
+      font-weight: 450;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+    }
+
+  }
+
+}

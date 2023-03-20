@@ -1,0 +1,216 @@
+.blog_filter {
+  padding: 50px 0 24px 0;
+  @media (min-width: $screen-md) {
+    padding: 40px 0;
+    position: relative;
+    z-index: 81;
+  }
+  .filter_bar_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      overflow: visible;
+      flex-direction: row;
+      background: #3f3f3f;
+      border-radius: 100px;
+      padding: 12px 24px 12px 12px;
+    }
+  }
+
+  .category_pills {
+    order: 2;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      order: 1;
+    }
+
+    .swiper-slide {
+      display: flex;
+      width: auto !important;
+    }
+
+    a {
+      @include font(600, 14, 21px);
+      color: #fff;
+      letter-spacing: -0.06em;
+      padding: 9px 24px;
+      border-radius: 100px;
+      transition: ease all 0.3s;
+
+      &.router-link-active,
+      &:hover {
+        background: #fff;
+        color: $black;
+      }
+    }
+  }
+
+  .search_form_wrapper {
+    order: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    @media (min-width: $screen-md) {
+      order: 2;
+      margin-bottom: 0;
+    }
+  }
+
+  .search_button {
+    background: #3f3f3f;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include font(500, 14, 21px);
+    padding: 16px 19px;
+    border-radius: 100px;
+    color: #fff;
+    @media (min-width: $screen-md) {
+      background: none;
+      padding: 0;
+      width: auto;
+      margin-left: auto;
+      font-size: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      @media (min-width: $screen-md) {
+        order: 2;
+        margin-right: 0;
+        margin-left: 27px;
+      }
+    }
+  }
+
+  .search_wrapper {
+    position: fixed;
+    background: $black;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #3f3f3f;
+    @media (min-width: $screen-md) {
+      position: absolute;
+      border-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .search_input_wrapper {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.24);
+    border-radius: 56px;
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+
+    .search_icon {
+      display: flex;
+      width: 100%;
+      max-width: 24px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+    }
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form_wrap {
+    display: flex;
+    width: 100%;
+    input {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      @include font(450, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+      width: 100%;
+      transition: ease all 0.3s;
+      background: none;
+      @media (min-width: $screen-md) {
+        background: none;
+        // color: #fff;
+      }
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #d3d3d3;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #d3d3d3;
+      }
+      & :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #d3d3d3;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: #d3d3d3;
+      }
+    }
+  }
+
+  .search_clear {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 16px;
+    }
+  }
+
+  .search_cancel {
+    @include font(600, 16, 24px);
+    letter-spacing: -0.06em;
+    color: #fff;
+    margin-left: 18px;
+    width: 100%;
+    max-width: 53px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.background_card_columns_mobile {
+  padding: 0px 0 0px;
+
+  .background_cards_slider {
+    padding: 0 24px;
+    overflow: hidden;
+  }
+
+  .card_image {
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 500px;
+  }
+
+  .slide_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(46, 46, 46, 0.4) 0%,
+        #2e2e2e 100%
+      );
+      z-index: 4;
+    }
+  }
+
+  .slide_text_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: calc(100% - 80px);
+    max-height: calc(100% - 80px);
+    height: 100%;
+    z-index: 6;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .title {
+    @include font(600, 24, 24px);
+    text-align: left;
+    margin-bottom: 16px;
+    letter-spacing: -0.06em;
+    color: #fff;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
+
+  .content {
+    overflow: hidden;
+    @include font(500, 18, 27px);
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.015em;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .btn_group {
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  .slide_pagination {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .scrollbar {
+    width: 100%;
+    margin-right: 24px;
+  }
+
+  .caro_progress {
+    position: relative;
+    width: 100%;
+    background: #3f3f3f;
+    border-radius: 2px;
+    height: 2px;
+
+    .swiper-pagination-progressbar-fill {
+      position: absolute;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      height: 2px;
+      transform-origin: left top;
+    }
+  }
+
+  .arrows {
+    width: 100%;
+    max-width: 112px;
+    display: flex;
+  }
+
+  .caro_button {
+    width: 100%;
+    display: flex;
+    max-width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    transition: ease all 0.3s;
+
+    svg {
+      max-width: 24px;
+    }
+  }
+
+  .caro_prev {
+    margin-right: 16px;
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.1;
+  }
+}

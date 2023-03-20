@@ -1,0 +1,168 @@
+.feature_tabbed_carousel {
+  padding: 80px 0;
+  @media (min-width: $screen-md) {
+    padding: 100px 0;
+  }
+  .title {
+    @include font(800, 48, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+
+  .description {
+    @include font(400, 20, 30px);
+    letter-spacing: -0.03em;
+    color: #d3d3d3;
+    text-align: center;
+    margin-bottom: 80px;
+    @media (min-width: $screen-md) {
+      max-width: 640px;
+      margin: 0 auto 80px;
+    }
+  }
+
+  .tabs_header {
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    padding: 8px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.165703781512605) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    &:before {
+      content: "";
+      position: absolute;
+      //   z-index: 1;
+      width: calc(100% - 2px);
+      height: calc(100% - 1px);
+      left: 1px;
+      bottom: 0;
+      background: #2e2e2e;
+      border-radius: 24px;
+    }
+  }
+
+  .tab {
+    width: 100%;
+    color: #7c7c7c;
+
+    @include font(600, 20, 20px);
+    letter-spacing: -0.06em;
+    padding: 16px;
+    position: relative;
+    z-index: 2;
+    transition: ease all 0.3s;
+    background: none;
+    border-radius: 16px;
+    @media (min-width: $screen-md) {
+      max-width: 25%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      width: calc(100% - 2px);
+      height: calc(100% - 1px);
+      z-index: -1;
+      transition: ease all 0.3s;
+      border-radius: 16px;
+    }
+
+    &.active {
+      color: #fff;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.165703781512605) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      &:before {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.112) 0%,
+            rgba(0, 0, 0, 0.08) 100%
+          ),
+          #3f3f3f;
+      }
+    }
+  }
+
+  .tab_body {
+    margin-top: 80px;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .slide_image {
+    position: relative;
+
+    img {
+      z-index: 1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: linear-gradient(360deg, #2e2e2e 0%, rgba(46, 46, 46, 0) 100%);
+      z-index: 2;
+      border-radius: 8px;
+    }
+  }
+
+  .slide_image_data {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 24px 24px;
+    z-index: 3;
+  }
+
+  .logo {
+    width: 100%;
+    height: 48px;
+    max-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-bottom: 16px;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  .slide_image_data {
+    .title {
+      @include font(600, 16, 24px);
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+}

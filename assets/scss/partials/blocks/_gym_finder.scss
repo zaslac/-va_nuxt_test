@@ -1,0 +1,467 @@
+.gym_finder {
+  margin-bottom: 80px;
+  background: #2e2e2e;
+  border-top: 1px solid #2e2e2e;
+  border-radius: 24px;
+  padding: 40px;
+
+  .title {
+    color: #fff;
+    letter-spacing: -0.06em;
+    @include font(600, 24, 24px);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .mobile_toggle {
+    display: flex;
+    background: #3f3f3f;
+    border-radius: 32px;
+    padding: 16px 24px;
+    @include font(500, 16, 24px);
+    letter-spacing: -0.03em;
+    color: #fff;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      margin-right: 16px;
+    }
+
+    .cancel_search {
+      margin-left: auto;
+
+      .icon {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .search_panel_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    z-index: 999;
+    overflow: auto;
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      background: #2e2e2e;
+    }
+
+  }
+
+  .desktop_search_header {
+    top: -120px;
+
+    .search_header {
+      padding: 24px 0 !important;
+
+      .search_panel {
+        display: flex;
+        background: #3f3f3f;
+        border-radius: 32px;
+        padding: 16px 24px;
+        font-family: "Gotham SSm";
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        letter-spacing: -0.03em;
+        color: #fff;
+        box-shadow: none;
+        border: 0;
+      }
+
+    }
+
+  }
+
+  .search_header {
+    padding: 24px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #3f3f3f;
+  }
+
+  .search_panel {
+    width: 100%;
+    align-items: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.24);
+    border-radius: 32px;
+    padding: 16px 24px;
+
+    .icon_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  .search_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      @include font(450, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+      width: 100%;
+      transition: ease all 0.3s;
+      background: none;
+      @media (min-width: $screen-md) {
+        background: none;
+        // color: #fff;
+      }
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #d3d3d3;
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #d3d3d3;
+      }
+      & :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #d3d3d3;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: #d3d3d3;
+      }
+    }
+  }
+
+  .cancel_search {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 16px;
+    }
+  }
+
+  .button_panel {
+    @include font(600, 16, 24px);
+    letter-spacing: -0.06em;
+    color: #fff;
+    margin-left: 18px;
+    width: 100%;
+    max-width: 53px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .search_panel_body {
+    padding: 40px 24px;
+
+    &.location_search {
+      padding: 0;
+    }
+
+    h4 {
+      @include font(600, 14, 14px);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      @media (min-width: $screen-md) {
+        color: #fff;
+      }
+    }
+
+    .clubs {
+      margin-bottom: 40px;
+    }
+
+    .location_list {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $screen-md) {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
+
+    .citem {
+      display: flex;
+      @include font(500, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+      transition: ease all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: $red;
+
+        .icon {
+          svg {
+            path {
+              stroke: $red;
+            }
+          }
+        }
+      }
+
+      strong {
+        font-weight: 700;
+        color: $black;
+        margin-right: 4px;
+      }
+
+      .icon {
+        width: 100%;
+        max-width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+
+        svg {
+          path {
+            transition: ease all 0.3s;
+          }
+        }
+      }
+
+      .club_facility {
+        @include font(700, 12, 12px);
+        letter-spacing: -0.03em;
+        color: #fff;
+        padding: 4px 8px 3px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 24px;
+        background: #3f3f3f;
+        border-radius: 4px;
+
+        &.club-v-max {
+          background: #aa80b4;
+        }
+
+        &.club-v {
+          background: #50b8df;
+        }
+
+        &.collection_facility {
+          background: #DEC27A;
+        }
+
+      }
+    }
+  }
+
+  .body_empty {
+    .citem {
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        width: 25%;
+      }
+
+    }
+
+  }
+
+  .location_search {
+    .panel_header {
+      padding: 24px;
+      @include font(400, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+      border-bottom: 2px solid #3f3f3f;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .result_card {
+      border-bottom: 2px solid #3f3f3f;
+    }
+
+    .panel_results {
+      .title {
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .no_kid_facilities {
+    margin-top: 40px;
+  }
+
+  .single_club_detail {
+    margin-top: 78px;
+    border-radius: 21px;
+    overflow: hidden;
+    max-width: 390px;
+    margin: 40px auto 0 auto;
+
+    &.club-v {
+      background: linear-gradient(
+        rgb(80, 184, 223) 0%,
+        rgb(80, 184, 223) 50%,
+        rgba(80, 184, 223, 0.15) 100%
+      );
+
+      .card_age {
+        background: #50b8df;
+      }
+
+      .title {
+        color: #50b8df;
+      }
+    }
+    &.club-v-max {
+      background: linear-gradient(
+        rgb(170, 128, 180) 0%,
+        rgb(170, 128, 180) 50%,
+        rgba(170, 128, 180, 0.15) 100%
+      );
+
+      .card_age {
+        background: #aa80b4;
+      }
+
+      .title {
+        color: #aa80b4;
+      }
+    }
+  }
+
+  .single_club_card {
+    margin: 4px;
+    background: #2e2e2e;
+    border-radius: 21px;
+    overflow: hidden;
+  }
+
+  .card_image {
+    position: relative;
+
+    .image_shim {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(46, 46, 46);
+        background: linear-gradient(
+          180deg,
+          rgba(46, 46, 46, 0) 0%,
+          rgba(46, 46, 46, 1) 80%
+        );
+      }
+    }
+  }
+
+  .card_age {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    @include font(700, 14, 14px);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .card_body {
+    padding: 0 24px 40px;
+    position: relative;
+    z-index: 5;
+
+    .title {
+      @include font(600, 24, 24px);
+      letter-spacing: -0.06em;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .price {
+      @include font(800, 36, 36px);
+      letter-spacing: -0.06em;
+      text-align: left;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+
+      .small {
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 8px;
+        color: #7c7c7c;
+        text-transform: uppercase;
+      }
+    }
+
+    .highlights {
+      li {
+        display: flex;
+        @include font(500, 16, 24px);
+        letter-spacing: -0.03em;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+
+      .icon {
+        width: 100%;
+        max-width: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 16px;
+        margin-right: 16px;
+      }
+    }
+  }
+}

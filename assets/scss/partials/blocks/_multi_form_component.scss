@@ -1,0 +1,92 @@
+.multi_form_component {
+
+  margin-bottom: 160px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+    flex-direction: row;
+  }
+
+
+  .container {
+    max-width: 680px;
+  }
+
+  .intro {
+    @include font(350, 20, 150%);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .forms {
+
+    .form_selector {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 80px;
+
+      @media (min-width: $screen-md) {
+        flex-direction: row;
+      }
+
+      .selector {
+        width: 100%;
+
+        label {
+          display: block;
+          width: 100%;
+          background: #2E2E2E;
+          border-radius: 16px;
+          padding: 24px 24px 24px 88px;
+          @include font(325, 20, 150%);
+          color: #fff;
+          cursor: pointer;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: '';
+            background: none;
+            border: 2px solid #3F3F3F;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            top: 20px;
+            left: 26px;
+          }
+
+        }
+
+        input {
+
+          display: none;
+
+          &:checked+label {
+            background: #fff;
+            color: #2E2E2E;
+
+            &:before {
+              content: url("@/assets/img/white-tick.svg");
+              background: #EB0029;
+              border-color: #EB0029;
+              text-align: center;
+              line-height: 44px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .hubs-form {
+    display: none;
+  }
+
+}

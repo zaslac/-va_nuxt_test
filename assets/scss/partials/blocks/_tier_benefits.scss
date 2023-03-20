@@ -1,0 +1,159 @@
+.tier_benefits {
+  padding: 80px 0;
+  @media (min-width: $screen-md) {
+    padding: 100px 0;
+  }
+
+  .container {
+    padding: 0;
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+  }
+
+  .title_area {
+    padding: 0 24px;
+  }
+
+  .title {
+    @include font(800, 48, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+
+  .description {
+    @include font(400, 20, 30px);
+    letter-spacing: -0.03em;
+    color: #d3d3d3;
+    text-align: center;
+    margin-bottom: 80px;
+    @media (min-width: $screen-md) {
+      max-width: 640px;
+      margin: 0 auto 80px;
+    }
+  }
+
+  .tier_level_wrapper {
+    @media (min-width: $screen-md) {
+      border-left: 1px solid #585858;
+      border-right: 1px solid #585858;
+    }
+  }
+
+  .tier_level_header {
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+  }
+
+  .tier_col_title {
+    width: 100%;
+    max-width: calc(100% - 192px);
+    @media (min-width: $screen-md) {
+      max-width: calc(100% - 600px);
+    }
+  }
+
+  .header_title {
+    @include font(600, 24, 24px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    padding: 40px 24px;
+  }
+
+  .tier_col_tier {
+    width: 100%;
+    max-width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #585858;
+    @media (min-width: $screen-md) {
+      max-width: 200px;
+    }
+
+    &.bronze {
+      background: #292929;
+    }
+    &.silver {
+      background: #2e2e2e;
+    }
+    &.gold {
+      background: #323232;
+    }
+
+    img {
+      max-width: 40px;
+    }
+  }
+
+  .tier_level_body_row {
+    border-bottom: 1px solid #585858;
+
+    .tier_col_tier {
+      img {
+        max-width: 24px;
+      }
+    }
+  }
+
+  .row_title {
+    @include font(400, 12, 18px);
+    color: #fff;
+    padding: 24px;
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  .benefit_text {
+    @include font(400, 16, 24px);
+    color: #fff;
+    letter-spacing: -0.03em;
+  }
+
+  .partner_discounts_table {
+    @media (min-width: $screen-md) {
+      border-left: 1px solid #585858;
+      border-right: 1px solid #585858;
+    }
+    .title {
+      @include font(600, 24, 24px);
+      color: #fff;
+      letter-spacing: -0.06em;
+      padding: 40px 24px;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  .partner_discount_body {
+    border-top: 1px solid #585858;
+  }
+  .partner_discount_row {
+    border-bottom: 1px solid #585858;
+
+    .tier_col_tier {
+      @include font(400, 14, 21px);
+      color: #fff;
+      @media (min-width: $screen-md) {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    .tier_col_title {
+      @media (min-width: $screen-md) {
+        padding: 12px 24px;
+      }
+    }
+  }
+}

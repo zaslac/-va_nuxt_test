@@ -1,0 +1,74 @@
+.goal_item_container {
+
+  .counter {
+    padding: 8px;
+    margin: 0 auto;
+    background-color: #EB0029;
+    @include font(800,48,100%);
+    color: #FFFFFF;
+    display: table;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    margin-bottom: 80px;
+    @include font(800,48,100%);
+    color: #fff;
+    text-align: center;
+    letter-spacing: -0.06em;
+  }
+
+  .goal_items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm) {
+      flex-direction: row;
+    }
+
+    .goal_item {
+      flex: 1;
+      margin-bottom: 80px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $screen-sm) {
+        margin-bottom: 0;
+      }
+
+      .goal_image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 100%;
+        margin-bottom: 40px;
+
+        @media (min-width: $screen-sm) {
+          width: 240px;
+          height: 240px;
+        }
+
+      }
+
+      .title {
+        @include font(400,32,100%);
+        color: #fff;
+        text-align: center;
+        margin-bottom: 24px;
+        font-weight: bold;
+      }
+
+      .description {
+        @include font(400,18,150%);
+        color: #D3D3D3;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+}

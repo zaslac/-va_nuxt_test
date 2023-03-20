@@ -1,0 +1,9 @@
+.join_form_holder {
+  max-width: 650px;
+  margin: 0 auto 160px auto;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 200px;
+  }
+
+}

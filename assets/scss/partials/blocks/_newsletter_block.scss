@@ -1,0 +1,160 @@
+.newsletter_block {
+  background: linear-gradient(
+    89.86deg,
+    #f9f9f7 0.13%,
+    #f8f8f6 45.21%,
+    #f7f7f5 71.85%,
+    #f8f8f6 99.89%
+  );
+  margin: 80px 0;
+  position: relative;
+
+  .block_image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: $screen-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: auto 100%;
+      background-position: right center;
+    }
+
+    // &:before {
+    //   // content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: linear-gradient(
+    //     180deg,
+    //     #fdfdfd 0%,
+    //     #fafaf8 62.09%,
+    //     #f8f8f6 71.9%,
+    //     #fbfbf9 100%
+    //   );
+    // }
+  }
+
+  .block_body {
+    padding: 40px 0;
+    @media (min-width: $screen-md) {
+      padding: 80px 0;
+      max-width: 640px;
+    }
+  }
+
+  .small_title {
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    color: $black;
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+
+  p {
+    color: $grey;
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+  }
+
+  #newsletter_form {
+    padding-top: 40px;
+    position: relative;
+    @media (min-width: $screen-md) {
+      max-width: 360px;
+    }
+    form {
+      display: flex;
+      border-bottom: 2px solid rgba(63, 63, 63, 0.16);
+      border-radius: 1px;
+      padding-bottom: 8px;
+      position: relative;
+    }
+
+    .hs_email {
+      width: 100%;
+      position: relative;
+
+      &.focused,
+      &.focused_value {
+        label {
+          color: $grey;
+          font-size: 12px;
+          line-height: 18px;
+          top: -12px;
+        }
+      }
+
+      input {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background: none;
+      }
+
+      label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include font(400, 16, 24px);
+        color: $black;
+        letter-spacing: -0.03em;
+        transition: ease all 0.3s;
+      }
+    }
+
+    .hs_submit {
+      position: absolute;
+      right: 0;
+      bottom: 8px;
+      input {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        @include font(600, 16, 24px);
+        color: #d3d3d3;
+        letter-spacing: -0.06em;
+        background: none;
+      }
+    }
+
+    .no-list {
+      position: absolute;
+      bottom: -34px;
+      width: 100%;
+      display: flex;
+      min-height: 26px;
+
+      &.hs-error-msgs {
+        border-top: 2px solid $red;
+
+        .hs-error-msg {
+          @include font(400, 12, 150%);
+          color: $black;
+          top: 0;
+        }
+      }
+    }
+
+    .submitted-message {
+      @include font(400, 12, 150%);
+      color: #21a66c;
+    }
+  }
+}

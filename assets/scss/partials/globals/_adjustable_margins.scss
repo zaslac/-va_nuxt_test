@@ -1,0 +1,35 @@
+.small_margin_bottom {
+  margin-bottom: 40px !important;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 80px !important;
+  }
+
+}
+
+.medium_margin_bottom {
+  margin-bottom: 80px !important;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 160px !important;
+  }
+
+}
+
+.large_margin_bottom {
+  margin-bottom: 160px !important;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 200px !important;
+  }
+
+}
+
+.very_large_margin_bottom {
+  margin-bottom: 160px !important;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 320px !important;
+  }
+
+}

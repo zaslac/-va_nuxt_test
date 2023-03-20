@@ -1,0 +1,821 @@
+.main_membership_component {
+  margin-bottom: 160px;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+    padding-top: 5px;
+    overflow: visible;
+  }
+
+  .age_tabbed_component {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    .tabbed_content {
+      .tab_title_holder {
+        margin-bottom: 24px;
+        margin-top: 0;
+
+        .tab_list_title {
+          width: 100%;
+
+          .tab_title_content {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    &:before {
+      @media (min-width: $screen-md) {
+        content: url('/img/icons/ArrowLeft.svg');
+        position: absolute;
+        left: -230px;
+        top: -170px;
+      }
+    }
+
+  }
+
+  .membership-container {
+    padding: 0;
+
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+
+  }
+
+  .membership_tab_titles {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+    .tabbed_content {
+      &:before {
+        @media (min-width: $screen-md) {
+          content: url('/img/icons/ArrowRight.svg');
+          position: absolute;
+          right: -250px;
+          top: -160px;
+        }
+      }
+    }
+
+
+    .tab_title_holder {
+      margin-bottom: 0;
+      margin-top: 24px;
+
+      .tab_list_title {
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &:before {
+          border-top-left-radius: 24px;
+          border-top-right-radius: 24px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        .tab_title_content {
+          flex: 1;
+        }
+      }
+    }
+
+    &:before {
+      content: url('/img/icons/left-slant.svg');
+      position: absolute;
+      bottom: -29px;
+      left: -22px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &:after {
+      content: url('/img/icons/right-slant.svg');
+      position: absolute;
+      bottom: -29px;
+      right: -50px;
+      width: 50px;
+      height: 50px;
+    }
+
+  }
+
+  .membership_content_tabs {
+    background: #2E2E2E;
+    border-radius: 0 0 24px 24px;
+    padding: 40px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      border-radius: 24px;
+    }
+
+    .btn_group {
+      margin-top: 50px;
+
+      .btn {
+        padding: 14px 24px;
+      }
+
+    }
+
+    .gym_finder {
+      margin-bottom: 0;
+      padding-top: 0;
+      padding: 0;
+
+      .container {
+        padding: 0;
+
+        @media (min-width: $screen-md) {
+          padding: 0 24px;
+        }
+
+      }
+
+    }
+
+    .membership_tab_content {
+
+      .title {
+        @include font(600,32,100%);
+        color: #fff;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .description {
+        @include font(400,16,150%);
+        color: #fff;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+
+    }
+
+
+  }
+
+  .rate_toggle {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+
+    .active {
+      color: #fff !important;
+    }
+
+    .monthly {
+      @include font(450,16,100%);
+      color: #7C7C7C;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .anually {
+      @include font(450,16,100%);
+      color: #7C7C7C;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #3F3F3F;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #EB0029;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #3F3F3F;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .collection_card {
+
+    .inner_content {
+      padding: 0 !important;
+      overflow: hidden;
+
+      .club_image {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 101%;
+          background: linear-gradient(180deg, rgba(46, 46, 46, 0) 0%, #2E2E2E 100%);
+        }
+
+        .location {
+          position: absolute;
+          bottom: 0;
+          padding: 16px 40px;
+          font-size: 14px;
+          @include font(450,14px 100%);
+          color: rgba(255, 255, 255, 0.64);
+          text-transform: uppercase;
+        }
+
+      }
+
+      .collection_content {
+        padding: 0 40px 40px 40px;
+      }
+
+    }
+
+  }
+
+  .popular {
+    background: linear-gradient(rgb(235, 0, 41) 0%, rgb(235, 0, 41) 50%, rgba(235, 0, 41, 0.3) 100%) !important;
+    position: relative;
+
+    &:before {
+      content: url('/img/icons/poptag.svg');
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: -24px;
+    }
+
+  }
+
+  .membership_card {
+    position: relative;
+    border-radius: 21px;
+    background: linear-gradient(rgb(97, 97, 97) 0%, rgb(97, 97, 97) 50%, rgba(97, 97, 97, 0.3) 100%);
+    padding: 4px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $screen-md) {
+      flex: 1;
+    }
+
+    .no_rates {
+
+      .no_rate {
+        display: none;
+      }
+
+      .active {
+        display: flex;
+        position: absolute;
+        z-index: 99;
+        background-color: #2E2E2E;
+        border-radius: 17px;
+        top: 4px;
+        left: 4px;
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        padding: 40px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        font-weight: 450;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+        text-align: center;
+      }
+
+    }
+
+    .rate_list {
+      margin-bottom: 32px;
+
+      .rate_item {
+        align-items: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #3F3F3F;
+        }
+
+        &:first-of-type {
+          padding-top: 0;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+
+          &:after {
+            content: none;
+          }
+        }
+
+        .left {
+          flex: 1;
+        }
+
+        .right {
+
+          .rate {
+            margin-bottom: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+    .inner_content {
+      border-radius: 17px;
+      background-color: #2E2E2E;
+      padding: 40px 24px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        padding: 40px;
+      }
+
+      .title {
+        @include font(450,24,100%);
+        color: #fff;
+        margin-bottom: 32px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .active {
+        display: block !important;
+      }
+
+      .rate {
+        @include font(450, 36, 100%);
+        color: #fff;
+        font-weight: bold !important;
+        margin-bottom: 16px;
+        display: none;
+        letter-spacing: -0.06em;
+
+        @media (min-width: $screen-md) {
+          @include font(450, 48, 100%);
+        }
+
+        span {
+          @include font(450,14px, 100%);
+          font-size: 14px !important;
+          text-transform: uppercase;
+          color: #7c7c7c;
+          font-weight: bold;
+          letter-spacing: 0;
+        }
+
+      }
+
+      .content {
+        font-size: 16px;
+        @include font(450,16px, 150%);
+        color: #fff;
+        letter-spacing: -0.03em;
+      }
+
+      .class_list_link {
+        display: inline-block;
+        font-size: 16px;
+        @include font(450,16px, 150%);
+        color: #fff;
+        margin-top: 16px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .rate_item {
+        display: flex;
+
+        .left {
+          @include font(400,16,150%);
+          color: #fff;
+        }
+
+        .rate {
+          @include font(450, 32, 100%);
+          color: #fff;
+        }
+
+      }
+
+      .btn_group {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        width: calc(100% - 40px);
+        justify-content : unset;
+
+        .btn {
+          width: calc(100% - 40px);
+        }
+
+      }
+
+      ul {
+        margin-top: 16px;
+
+        li {
+          @include font(400, 16, 150%);
+          letter-spacing: -0.03em;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          .icon {
+            width: 100%;
+            max-width: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .slide_pagination {
+    margin-top: 28px;
+    margin-bottom: 40px;
+
+    .arrows {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .caro_button {
+      width: 100%;
+      display: flex;
+      max-width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 100px;
+      align-items: center;
+      justify-content: center;
+      transition: ease all 0.3s;
+
+      svg {
+        max-width: 24px;
+      }
+    }
+
+    .caro_prev {
+      margin-right: 16px;
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.1;
+    }
+  }
+
+  .search_panel_wrapper {
+    z-index: 4;
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      background: #2e2e2e;
+    }
+
+  }
+
+  .kids_tab {
+    .single_club_detail {
+      margin-top: 78px;
+      border-radius: 21px;
+      overflow: hidden;
+      max-width: 408px;
+      margin: 0 auto;
+
+      &.club-v {
+        background: linear-gradient(
+                        rgb(80, 184, 223) 0%,
+                        rgb(80, 184, 223) 50%,
+                        rgba(80, 184, 223, 0.15) 100%
+        );
+
+        .card_age {
+          background: #50b8df;
+        }
+
+        .title {
+          color: #50b8df;
+        }
+      }
+      &.club-v-max {
+        background: linear-gradient(
+                        rgb(170, 128, 180) 0%,
+                        rgb(170, 128, 180) 50%,
+                        rgba(170, 128, 180, 0.15) 100%
+        );
+
+        .card_age {
+          background: #aa80b4;
+        }
+
+        .title {
+          color: #aa80b4;
+        }
+      }
+    }
+
+    .single_club_card {
+      margin: 4px;
+      background: #2e2e2e;
+      border-radius: 21px;
+      overflow: hidden;
+    }
+  }
+
+  .membership_cta {
+    width: 100%;
+    height: 104px;
+    padding: 0 40px;
+    background: linear-gradient(92.93deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #EB0029;
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+
+    .content {
+      @include font(440, 24, 100%);
+      color: #FFFFFF;
+      letter-spacing: -0.06em;
+      width: 100%;
+    }
+
+  }
+
+  .mobile_btn {
+    width: 100%;
+    .btn {
+      width: 100%;
+      padding: 14px 24px;
+    }
+  }
+
+  .mobile_toggle {
+    margin-bottom: 40px;
+  }
+
+  .youth_premier_slider {
+
+    .swiper-wrapper {
+      //justify-content: center;
+    }
+
+  }
+
+  .adult_premier_slider {
+
+    .swiper-wrapper {
+      //justify-content: center;
+    }
+
+  }
+
+  .adult_membership_slider {
+
+    .swiper-wrapper {
+      //justify-content: center;
+    }
+
+  }
+
+  .youth_membership_slider {
+
+    .swiper-wrapper {
+      //justify-content: center;
+    }
+
+  }
+
+
+}
+
+.medical_aid_info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 150%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    gap:0;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 150%;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .logos {
+    display: flex;
+
+    img {
+      height: 30px;
+      width: auto;
+      margin-right: 16px;
+    }
+
+  }
+
+  .active {
+    display: block !important;
+  }
+
+  .content {
+    text-align: center;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+
+  }
+
+
+  .club_list_desktop_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(37, 37, 37, 0.64);
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .club_list_desktop_modal_inner {
+      background: #fff;
+      width: 100%;
+      position: relative;
+      z-index: 4;
+      max-width: 400px;
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .opening_times {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      @include font(600, 24, 100%);
+      color: $black;
+      letter-spacing: -0.06em;
+      margin-bottom: 40px;
+    }
+
+    .time_wrap {
+      display: flex;
+      align-items: center;
+      @include font(400, 16, 150%);
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+
+      &.active {
+        font-weight: 600;
+      }
+
+      &.time_0 {
+        order: 8;
+      }
+    }
+
+    .time {
+      margin-left: auto;
+    }
+
+    .close_button {
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.collection_disclaimer {
+  margin-top: 16px;
+  font-weight: 450;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #7C7C7C;
+}
+
+.has-popular {
+  margin-top: 60px;
+}

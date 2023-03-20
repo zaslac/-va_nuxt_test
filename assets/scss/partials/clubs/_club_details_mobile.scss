@@ -1,0 +1,110 @@
+.club_details_mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: $black;
+  left: 0;
+  z-index: 91;
+  overflow: auto;
+  // padding: 24px 26px 0 40px;
+
+  .overlay_header {
+    padding: 24px;
+    display: flex;
+
+    button.close {
+      width: 100%;
+      max-width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 100px;
+      margin-left: auto;
+
+      svg {
+        max-width: 24px;
+      }
+    }
+  }
+
+  .overlay_title {
+    padding: 0 40px 24px;
+
+    h2 {
+      @include font(600, 24, 100%);
+      color: #fff;
+      letter-spacing: -0.06em;
+    }
+  }
+
+  .overlay_body {
+    padding: 0 40px 64px;
+  }
+
+  h5 {
+    @include font(600, 16, 150%);
+    color: $grey;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+
+  .gm_body {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+      margin-right: 16px;
+
+      img {
+        border-radius: 100px;
+      }
+    }
+
+    .title {
+      @include font(500, 16, 150%);
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+  }
+
+  a {
+    @include font(500, 16, 150%);
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+
+  .club_gm,
+  .club_location,
+  .club_chat {
+    margin-bottom: 24px;
+  }
+
+  .opening_times {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time_wrap {
+    display: flex;
+    @include font(400, 16, 150%);
+    color: #fff;
+    margin-bottom: 8px;
+
+    .time {
+      margin-left: auto;
+    }
+
+    &.active {
+      font-weight: 600;
+    }
+
+    &.time_0 {
+      order: 8;
+    }
+  }
+}

@@ -1,0 +1,348 @@
+.mega_menu_wrapper {
+  transition: ease all 0.3s;
+  position: relative;
+  height: 0;
+  &.mega-menu-open {
+    min-height: 280px;
+  }
+}
+.meganav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 100vh;
+  overflow: auto;
+  z-index: 8;
+
+  transition: ease all 0.3s;
+  @media (min-width: $screen-md) {
+    margin-top: 0;
+    padding-top: 16px;
+    height: auto;
+    position: absolute;
+    background: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start !important;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  .return_box {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    padding: 28px 0px;
+    justify-content: space-between;
+    z-index: 6;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      max-width: 24px;
+    }
+  }
+
+  .parent_title {
+    @include font(800, 14, 100%);
+    text-transform: uppercase;
+    color: $grey;
+    margin: 24px 0;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-md) {
+      margin: 0 8px;
+      min-height: 240px;
+    }
+
+    &:hover {
+      .box_background {
+        img {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  .box_background {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    @media (min-width: $screen-md) {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: ease all 0.4s;
+      @media (min-width: $screen-md) {
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 240px;
+      }
+    }
+
+    video {
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .box_overlay {
+    position: relative;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px;
+    background: linear-gradient(
+      90deg,
+      #262626 0.39%,
+      rgba(37, 37, 37, 0.16) 100%
+    );
+    @media (min-width: $screen-md) {
+      position: absolute;
+      flex-direction: column;
+      align-items: flex-start;
+      background: rgba(37, 37, 37, 0.4);
+      border-radius: 8px;
+    }
+  }
+
+  .small_title {
+    @include font(600, 14, 100%);
+    letter-spacing: -0.06em;
+    color: rgba(255, 255, 255, 0.64);
+    margin-bottom: 10px;
+    @media (min-width: $screen-md) {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 8px;
+    }
+  }
+
+  .big_title {
+    @include font(600, 24, 100%);
+    letter-spacing: -0.06em;
+    color: #fff;
+    @media (min-width: $screen-md) {
+      font-size: 32px;
+    }
+  }
+
+  .link_btn_group {
+    margin-left: auto;
+    background: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease all 0.3s;
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+      background: rgba(37, 37, 37, 0.4);
+      border: 2px solid #ffffff;
+      backdrop-filter: blur(8px);
+      width: 56px;
+      height: 56px;
+    }
+
+    &:hover {
+      background: #fff;
+
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+
+    .btn_arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+    }
+
+    svg {
+      max-width: 24px;
+      path {
+        stroke: $black;
+        transition: ease all 0.3s;
+        @media (min-width: $screen-md) {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  .link_list {
+    align-items: flex-start;
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+
+    ul {
+      width: 100%;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start !important;
+      margin-bottom: 24px;
+      min-height: 10px;
+      @media (min-width: $screen-md) {
+        padding: 0;
+        margin-bottom: 16px;
+      }
+
+      &:hover {
+        a {
+          color: $red !important;
+        }
+      }
+    }
+
+    a {
+      @include font(600, 32, 100%);
+      letter-spacing: -0.06em;
+      color: $black !important;
+      align-items: flex-start;
+      @media (min-width: $screen-md) {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        color: $black !important;
+      }
+    }
+  }
+
+  &.mega_three_block_list {
+    padding-bottom: 16px;
+    @media (min-width: $screen-md) {
+      padding-bottom: 24px;
+    }
+    .col {
+      @media (min-width: $screen-md) {
+        width: 100%;
+        max-width: 25%;
+      }
+    }
+    .col_1 {
+      margin-bottom: 24px;
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .col_2,
+    .col_3 {
+      @media (max-width: $screen-md) {
+        margin-bottom: 24px;
+        .box_background {
+          display: none;
+        }
+
+        .box_overlay {
+          position: relative;
+          padding: 0;
+          background: none;
+        }
+
+        .small_title {
+          display: none;
+        }
+
+        .big_title {
+          color: $black;
+          font-size: 32px;
+          line-height: 100%;
+        }
+
+        .link_btn_group {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.mega_three_block_full {
+    @media (min-width: $screen-md) {
+      padding-bottom: 24px;
+    }
+    .col {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  &.mega_four_block_full {
+    @media (min-width: $screen-md) {
+      padding-bottom: 24px;
+    }
+    .col {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &.mega_two_block_list {
+    padding-bottom: 16px;
+    @media (min-width: $screen-md) {
+      padding-bottom: 24px;
+    }
+    .col {
+      @media (min-width: $screen-md) {
+        width: 100%;
+        max-width: 40%;
+      }
+    }
+    .col_1,
+    .col_2 {
+      margin-bottom: 24px;
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .col.col_4 {
+      @media (min-width: $screen-md) {
+        max-width: 20%;
+      }
+    }
+  }
+}

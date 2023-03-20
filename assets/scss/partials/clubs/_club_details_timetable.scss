@@ -1,0 +1,288 @@
+.club_details_timetable {
+  background: $black;
+  padding: 80px 0;
+  overflow: hidden;
+
+  h5 {
+    @include h5();
+  }
+
+  h2 {
+    @include h2();
+    margin-bottom: 40px;
+  }
+
+  p {
+    @include font(325, 20, 150%);
+    letter-spacing: -0.03em;
+    color: $grey2;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .timetable_tab_group {
+    margin-top: 80px;
+    padding: 0 24px;
+
+    @media (min-width: $screen-md) {
+      max-width: 1280px;
+      padding: 0 24px;
+      margin: 80px auto 0;
+    }
+  }
+
+  .timetable_tab_header {
+    display: flex;
+    overflow: auto;
+    padding: 24px 0;
+    border-top: 2px solid #3f3f3f;
+    border-bottom: 2px solid #3f3f3f;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 20px;
+      width: 100%;
+      min-width: 119px;
+      border-radius: 8px;
+      transition: ease all 0.4s;
+
+      &:hover {
+        background: #2e2e2e;
+        cursor: pointer;
+      }
+
+      &.active {
+        background: #fff;
+
+        .day {
+          color: $black;
+        }
+
+        .month_day {
+          color: rgba(37, 37, 37, 0.64);
+        }
+      }
+    }
+
+    .day {
+      @include font(800, 24, 100%);
+      color: #fff;
+      letter-spacing: -0.06em;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .month_day {
+      @include font(800, 12, 100%);
+      text-align: center;
+      letter-spacing: -0.06em;
+      color: rgba(255, 255, 255, 0.64);
+    }
+  }
+
+  .timetable_tab_body {
+    max-width: 1280px;
+    padding: 0px;
+    margin: 0 auto;
+    @media (min-width: $screen-md) {
+      padding: 0 24px;
+    }
+  }
+
+  .timetable_table {
+    .table_header {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        background: #2e2e2e;
+      }
+
+      span {
+        @include font(800, 14, 150%);
+        color: #fff;
+        width: 100%;
+        text-transform: uppercase;
+        padding: 24px;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border-bottom: 2px solid #3f3f3f;
+      position: relative;
+      transition: ease all 0.3s;
+      @media (min-width: $screen-md) {
+        flex-direction: row;
+        padding: 0;
+      }
+
+      &:hover {
+        background: #2e2e2e;
+      }
+    }
+  }
+
+  .classes {
+    padding: 24px;
+    border-bottom: 2px solid #3f3f3f;
+    transition: ease all 0.3s;
+    @media (min-width: $screen-md) {
+      padding: 0;
+    }
+
+    &.active {
+      background: #3f3f3f;
+    }
+
+    &:hover {
+      background: #3f3f3f;
+      cursor: pointer;
+    }
+  }
+
+  .class_overview {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  .time_col,
+  .class_col,
+  .inst_col,
+  .buttons_col {
+    @media (min-width: $screen-md) {
+      width: 100%;
+      max-width: 25%;
+      margin-bottom: 0 !important;
+      padding: 24px;
+    }
+  }
+  .time_col {
+    order: 2;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    @media (min-width: $screen-md) {
+      order: 1;
+    }
+
+    .time {
+      @include font(400, 16, 24px);
+      color: #fff;
+      margin-right: 16px;
+      @media (min-width: $screen-md) {
+        line-height: 150%;
+      }
+    }
+
+    .duration {
+      @include font(400, 16, 24px);
+      color: rgba(255, 255, 255, 0.64);
+      @media (min-width: $screen-md) {
+        line-height: 150%;
+      }
+    }
+  }
+
+  .class_col {
+    order: 1;
+    @include font(800, 16, 150%);
+    color: #fff;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @media (min-width: $screen-md) {
+      order: 2;
+    }
+
+    .circle {
+      position: relative;
+      width: 100%;
+      max-width: 16px;
+      height: 16px;
+      display: block;
+      border-radius: 100px;
+      margin-right: 16px;
+    }
+  }
+
+  .inst_col {
+    order: 3;
+    @include font(400, 16, 24px);
+    color: #fff;
+  }
+
+  .buttons_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @media (min-width: $screen-md) {
+      position: relative;
+      order: 4;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 100px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      @media (min-width: $screen-md) {
+        top: 24px;
+        right: 24px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    svg {
+      max-width: 16px;
+    }
+  }
+
+  .class_description {
+    padding: 16px 0 0;
+    @media (min-width: $screen-md) {
+      padding: 16px 24px;
+    }
+
+    p {
+      @include font(400, 16, 24px);
+      text-align: left;
+      color: #fff;
+    }
+
+    label {
+      @include font(500, 16, 24px);
+      text-align: left;
+      color: #fff;
+    }
+
+    li {
+      @include font(400, 16, 24px);
+      text-align: left;
+      color: #fff;
+    }
+  }
+}

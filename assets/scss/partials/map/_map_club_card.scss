@@ -1,0 +1,149 @@
+.map_club_card {
+  background: $black;
+  border-radius: 16px;
+  padding: 24px;
+  transition: ease all 0.3s;
+  @media (min-width: $screen-md) {
+    border-bottom: 2px solid #3f3f3f;
+    border-radius: 0;
+    padding: 24px 40px 24px 24px;
+  }
+
+  &:hover {
+    background: #3f3f3f;
+    cursor: pointer;
+    @media (min-width: $screen-md) {
+    }
+  }
+
+  .club_card_inner {
+  }
+
+  .card_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    @include font(600, 20, 20px);
+    letter-spacing: -0.06em;
+    color: #fff;
+    margin-right: 8px;
+  }
+
+  .tag {
+    background: #dec27a;
+    border-radius: 4px;
+    @include font(700, 12, 12px);
+    letter-spacing: -0.03em;
+    color: #fff;
+    padding: 4px 8px;
+  }
+
+  .club_facility {
+    @include font(700, 12, 12px);
+    letter-spacing: -0.03em;
+    color: #fff;
+    padding: 4px 8px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    background: #3f3f3f;
+    border-radius: 4px;
+    white-space: nowrap;
+
+    &.club-v-max {
+      background: #aa80b4;
+    }
+
+    &.club-v {
+      background: #50b8df;
+    }
+  }
+
+  .card_address {
+    @include font(500, 14, 150%);
+    color: $grey2;
+    margin-bottom: 2px;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .card_tel {
+    display: flex;
+    @include font(500, 14, 150%);
+    color: $grey2;
+    margin-bottom: 2px;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 16px;
+      margin-right: 8px;
+    }
+  }
+
+  .card_opening_times {
+    display: flex;
+    @include font(500, 13, 150%);
+    color: $grey2;
+    margin-bottom: 16px;
+    @media (min-width: 400px) {
+      font-size: 14px;
+    }
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    .status {
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .time {
+      margin-left: 4px;
+      white-space: nowrap;
+    }
+    .green {
+      color: #21a66c;
+    }
+
+    .orange {
+      color: #e49e12;
+    }
+
+    .red {
+      color: #eb0029;
+    }
+  }
+
+  &:hover {
+    .card_footer {
+      @media (min-width: $screen-md) {
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+      }
+    }
+  }
+
+  .card_footer {
+    width: 100%;
+    @media (min-width: $screen-md) {
+      opacity: 0;
+      margin-top: 16px;
+      visibility: hidden;
+      display: none;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

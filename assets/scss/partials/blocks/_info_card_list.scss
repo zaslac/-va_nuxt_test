@@ -1,0 +1,53 @@
+.card_list_holder {
+  margin-bottom: 160px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+  }
+
+  .card_list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .card {
+      background: #2E2E2E;
+      border-radius: 16px;
+      padding: 40px;
+      width: 100%;
+      max-width: 100%;
+
+      @media (min-width: $screen-md) {
+        max-width: calc(50% - 20px);
+      }
+
+      .title {
+        @include h5();
+        color: #fff;
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 16px;
+        text-align: left;
+        text-transform: initial !important;
+      }
+
+      .content {
+        @include p();
+        font-size: 18px;
+        line-height: 27px;
+        color: #fff;
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}

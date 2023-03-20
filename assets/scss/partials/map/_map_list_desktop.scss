@@ -1,0 +1,70 @@
+.map_list_desktop {
+  padding: 224px 0 0;
+
+  .map_list_desktop_item_wrapper {
+    padding: 80px 0;
+  }
+
+  .map_list_desktop_item {
+    margin-bottom: 120px;
+  }
+
+  .mlai_title {
+    display: flex;
+    @include font(800, 48, 48px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .span {
+      letter-spacing: -0.06em;
+      color: $grey;
+      width: 28px;
+      font-size: 24px;
+      margin-left: 8px;
+      margin-top: -16px;
+    }
+
+    .icon {
+      margin-left: auto;
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+
+      svg {
+        max-width: 16px;
+      }
+    }
+  }
+
+  .mlai_body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .mlai_item {
+    display: flex;
+    align-items: center;
+    @include font(600, 16, 24px);
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 25%;
+
+    .icon {
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+  }
+}

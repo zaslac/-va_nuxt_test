@@ -1,0 +1,193 @@
+.club_details_facilities {
+  background: $black;
+  padding: 160px 0 80px;
+  overflow: hidden;
+  @media (min-width: $screen-md) {
+    padding: 200px 0 360px;
+  }
+
+  h5 {
+    @include h5();
+  }
+
+  h2 {
+    @include h2();
+
+    br {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+  .btn_group {
+    margin-top: 40px;
+  }
+
+  .facilities_slider {
+    margin-top: 80px;
+  }
+
+  .slide_inner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .slide_image {
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(37, 37, 37, 0.4) 0%,
+        rgba(37, 37, 37, 0.8) 100%
+      );
+    }
+
+    img {
+      min-height: 416px;
+      object-fit: cover;
+    }
+  }
+
+  .slide_body {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 100%;
+    max-width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 37, 37, 0.4);
+    backdrop-filter: blur(2px);
+    border-radius: 100px;
+    margin-bottom: auto;
+    margin: 24px 24px auto;
+    transition: ease all 0.3s;
+
+    img {
+      max-width: 32px;
+      // filter: invert(1);
+      transition: ease all 0.3s;
+    }
+  }
+
+  .slide_card_content {
+    min-height: 161px;
+    transition: ease all 0.4s;
+    @media (min-width: $screen-md) {
+      transform: translateY(114px);
+    }
+  }
+
+  .title {
+    padding: 0 40px;
+    @include font(600, 24, 24px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 16px;
+  }
+
+  p {
+    padding: 0 40px 40px;
+    @include font(350, 18, 150%);
+    letter-spacing: -0.015em;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+  }
+
+  .swiper-slide {
+    &:hover {
+      @media (min-width: $screen-md) {
+        cursor: pointer;
+        .icon {
+          background: #fff;
+          img {
+            filter: invert(1);
+          }
+        }
+
+        .slide_card_content {
+          transform: translateY(0);
+          p {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .slide_pagination {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .scrollbar {
+    width: 100%;
+    margin-right: 24px;
+  }
+
+  .facilities_caro_progress {
+    position: relative;
+    width: 100%;
+    background: #3f3f3f;
+    border-radius: 2px;
+    height: 2px;
+
+    .swiper-pagination-progressbar-fill {
+      position: absolute;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      height: 2px;
+      transform-origin: left top;
+    }
+  }
+
+  .arrows {
+    width: 100%;
+    max-width: 112px;
+    display: flex;
+  }
+
+  .facilities_caro_button {
+    width: 100%;
+    display: flex;
+    max-width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    transition: ease all 0.3s;
+
+    svg {
+      max-width: 24px;
+    }
+  }
+
+  .facilities_caro_prev {
+    margin-right: 16px;
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.1;
+  }
+}

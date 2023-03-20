@@ -1,0 +1,164 @@
+.club_details_desktop {
+  background: $black;
+  padding-bottom: 40px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .border {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    width: 100%;
+    padding-bottom: 41px;
+  }
+
+  .col {
+    width: 100%;
+    max-width: 25%;
+  }
+
+  h5 {
+    @include font(600, 16, 24px);
+    color: $grey;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+
+  .gm_body {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 24px;
+      margin-right: 16px;
+
+      img {
+        border-radius: 100px;
+      }
+    }
+
+    .title {
+      @include font(500, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+  }
+
+  a {
+    @include font(500, 16, 24px);
+    // letter-spacing: -0.03em;
+    color: #fff;
+  }
+
+  .open_body {
+    display: flex;
+    @include font(500, 16, 24px);
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .today {
+      margin-right: 24px;
+    }
+
+    .icon {
+      width: 100%;
+      max-width: 24px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        max-width: 12px;
+
+        path {
+          stroke-opacity: 1;
+        }
+      }
+    }
+  }
+
+  .opening_times_desktop_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(37, 37, 37, 0.64);
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .opening_times_desktop_modal_inner {
+      background: #fff;
+      width: 100%;
+      position: relative;
+      z-index: 4;
+      max-width: 400px;
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .opening_times {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      @include font(600, 24, 100%);
+      color: $black;
+      letter-spacing: -0.06em;
+      margin-bottom: 40px;
+    }
+
+    .time_wrap {
+      display: flex;
+      align-items: center;
+      @include font(400, 16, 150%);
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+
+      &.active {
+        font-weight: 600;
+      }
+
+      &.time_0 {
+        order: 8;
+      }
+    }
+
+    .time {
+      margin-left: auto;
+    }
+
+    .close_button {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

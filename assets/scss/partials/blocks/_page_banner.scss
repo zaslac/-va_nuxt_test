@@ -1,0 +1,228 @@
+.section_page_banner {
+  position: relative;
+  z-index: 3;
+}
+.page_banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 120px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+  }
+
+  .icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    img {
+      max-width: 145px;
+    }
+  }
+
+  .page_banner_video {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    video {
+      width: 100%;
+      min-height: 100vh;
+      object-fit: cover;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .page_banner_image {
+    position: relative;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding-top: 154px;
+    min-height: 100vh;
+    display: flex;
+
+    @media (min-width: $screen-md) {
+      padding-top: 0;
+      background-size: cover;
+    }
+
+    img {
+      margin-bottom: -115px;
+
+      @media (min-width: $screen-md) {
+        margin-top: auto;
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  .page_banner_text {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .small_title {
+    @include h5();
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    @include font(800, 32, 100%);
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    letter-spacing: -0.06em;
+
+    br {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    @media (min-width: 375px) {
+      font-size: 54px;
+    }
+
+    @media (min-width: 420px) {
+      font-size: 54px;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      margin: 0 auto 40px;
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+
+  p {
+    @include p();
+    color: #fff;
+    @media (min-width: $screen-md) {
+      max-width: 512px;
+      margin: 0 auto;
+    }
+  }
+
+  // a {
+  //   @include p();
+  //   color: #fff;
+  //   text-decoration: underline;
+  // }
+
+  .button_title {
+    color: #d3d3d3;
+  }
+
+  .btn_group {
+    margin-top: 20px;
+
+    .btn {
+      padding: 14px 24px;
+    }
+  }
+
+  .single_button {
+    a {
+      margin: 0 auto;
+
+      @media (min-width: $screen-md) {
+        //margin: unset;
+      }
+    }
+  }
+
+  .group_pager_down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      margin-top: 80px;
+    }
+  }
+
+  .pager_down {
+    width: 100%;
+    max-width: 56px;
+    height: 56px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(8px);
+    border-radius: 64px;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      max-width: 24px;
+
+      path {
+        stroke: #fff;
+        stroke-opacity: 1;
+      }
+    }
+  }
+}
+
+.compact_mode {
+  margin-bottom: 80px;
+
+  h1 {
+    font-size: 56px;
+
+    @media (min-width: $screen-md) {
+      font-size: 80px;
+    }
+  }
+
+  .page_banner_image {
+    min-height: 600px;
+    max-height: 600px;
+    img {
+      object-fit: cover;
+      max-height: 600px;
+      background: linear-gradient(
+        180deg,
+        rgba(37, 37, 37, 0) 0%,
+        rgba(37, 37, 37, 0.00838519) 11.79%,
+        rgba(37, 37, 37, 0.0324148) 21.38%,
+        rgba(37, 37, 37, 0.0704) 29.12%,
+        rgba(37, 37, 37, 0.120652) 35.34%,
+        rgba(37, 37, 37, 0.181481) 40.37%,
+        rgba(37, 37, 37, 0.2512) 44.56%,
+        rgba(37, 37, 37, 0.328119) 48.24%,
+        rgba(37, 37, 37, 0.410548) 51.76%,
+        rgba(37, 37, 37, 0.4968) 55.44%,
+        rgba(37, 37, 37, 0.585185) 59.63%,
+        rgba(37, 37, 37, 0.674015) 64.66%,
+        rgba(37, 37, 37, 0.7616) 70.88%,
+        rgba(37, 37, 37, 0.846252) 78.62%,
+        rgba(37, 37, 37, 0.926281) 88.21%,
+        #252525 100%
+      );
+    }
+  }
+}

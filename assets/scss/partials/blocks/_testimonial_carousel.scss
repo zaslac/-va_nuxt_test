@@ -1,0 +1,128 @@
+.testimonials_holder {
+  margin-bottom: 160px;
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 200px;
+  }
+
+  .testimonial {
+    background-size: cover;
+    background-position: 50%;
+    height: 230px;
+    position: relative;
+    border-radius: 16px;
+
+    .title {
+      @include font(350,18,150%);
+      color: #fff;
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      z-index: 5;
+      font-weight: bold;
+    }
+
+    .iframe {
+      display: none;
+      z-index: 999;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0.08) 0%, rgba(37, 37, 37, 0.8) 100%);
+
+      .play_button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &:before {
+          content: url('/img/icons/small-play.png');
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          text-align: center;
+          vertical-align: middle;
+          transition: 0.3s;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+    }
+
+  }
+
+  .arrows {
+    position: relative;
+    width: 100%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    .background_caro_button {
+      width: 100%;
+      display: flex;
+      max-width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 100px;
+      align-items: center;
+      justify-content: center;
+      transition: ease all 0.3s;
+
+      svg {
+        max-width: 24px;
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.24;
+    }
+
+  }
+
+  .slide_pagination {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .scrollbar {
+    width: 100%;
+    margin-right: 24px;
+  }
+
+  .arrows {
+    max-width: 112px;
+  }
+
+  .facilities_caro_progress {
+    position: relative;
+    width: 100%;
+    background: #3f3f3f;
+    border-radius: 2px;
+    height: 2px;
+
+    .swiper-pagination-progressbar-fill {
+      position: absolute;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      height: 2px;
+      transform-origin: left top;
+    }
+
+  }
+
+}

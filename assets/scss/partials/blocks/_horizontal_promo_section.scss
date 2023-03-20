@@ -1,0 +1,135 @@
+.horizontal_promo_section {
+  margin-bottom: 160px;
+  position: relative;
+  @media (min-width: $screen-md) {
+    margin-bottom: 200px;
+  }
+
+  .slide_image_wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  .slide_image_shim {
+    position: relative;
+    z-index: 1;
+  }
+
+  .slide_image_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide_image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(
+        0deg,
+        #2c2c2c 0%,
+        rgba(44, 44, 44, 0.24) 100%
+      );
+      opacity: 0.24;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      background: rgba(46, 46, 46, 0.56);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .slide_text_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide_title_area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+    .icon {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 145px;
+      margin-bottom: 40px;
+    }
+
+    .title {
+      @include font(800, 48, 48px);
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.06em;
+      @media (min-width: $screen-md) {
+        font-size: 64px;
+        line-height: 64px;
+      }
+    }
+  }
+
+  .slide_links_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  .slide_text {
+    color: rgba(255, 255, 255, 0.56);
+    @include font(700, 32, 32px);
+    letter-spacing: -0.06em;
+    margin-bottom: 48px;
+    transition: ease all 0.3s;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      padding: 48px;
+      margin: 0 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      color: #fff;
+    }
+  }
+}

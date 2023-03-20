@@ -1,0 +1,62 @@
+.map_list_accordion {
+  padding: 144px 24px 80px;
+
+  .map_list_accordion_item {
+    margin-bottom: 40px;
+  }
+
+  .mlai_title {
+    display: flex;
+    @include font(800, 36, 36px);
+    color: #fff;
+    letter-spacing: -0.06em;
+    align-items: center;
+
+    .span {
+      letter-spacing: -0.06em;
+      color: $grey;
+      width: 28px;
+      font-size: 24px;
+      margin-left: 8px;
+      margin-top: -8px;
+    }
+
+    .icon {
+      margin-left: auto;
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+
+      svg {
+        max-width: 16px;
+      }
+    }
+  }
+
+  .mlai_body {
+    margin-top: 40px;
+  }
+
+  .mlai_item {
+    display: flex;
+    align-items: center;
+    @include font(600, 16, 24px);
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 16px;
+
+    .icon {
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+  }
+}

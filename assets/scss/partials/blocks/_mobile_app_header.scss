@@ -1,0 +1,64 @@
+.mobile_app_header {
+  margin-top: 120px;
+  margin-bottom: 80px;
+
+  @media (min-width: $screen-md) {
+    display: block;
+    margin-top: 210px;
+  }
+
+  .sub_title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7C7C7C;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: 80px;
+    }
+
+  }
+
+  .content {
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+  }
+
+  .btn_group {
+
+  }
+
+}

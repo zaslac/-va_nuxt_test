@@ -1,0 +1,119 @@
+.tier_points_panel {
+  padding: 160px 0;
+  @media (min-width: $screen-md) {
+    padding: 200px 0;
+  }
+
+  .title {
+    @include font(800, 48, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    br {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+  }
+
+  .description {
+    @include font(400, 20, 30px);
+    letter-spacing: -0.03em;
+    color: #d3d3d3;
+    text-align: center;
+    margin-bottom: 80px;
+    @media (min-width: $screen-md) {
+      max-width: 640px;
+      margin: 0 auto 80px;
+    }
+  }
+
+  .ways_to_earn_wrapper {
+    flex-wrap: wrap;
+  }
+
+  .way_to_earn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px 0;
+    max-width: 50%;
+    margin: 0 0 16px;
+    @media (min-width: $screen-md) {
+      max-width: 25%;
+      margin: 0 0 40px;
+    }
+  }
+
+  .icon {
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 16px;
+  }
+
+  .wte_title {
+    @include font(600, 16, 24px);
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+    @media (min-width: $screen-md) {
+      letter-spacing: -0.06em;
+
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .wte_detail {
+    @include font(400, 16, 30px);
+    letter-spacing: -0.03em;
+    color: #d3d3d3;
+    text-align: center;
+  }
+
+  .sub_title {
+    margin-top: 64px;
+    @include font(600, 32, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+    @media (min-width: $screen-md) {
+      margin-top: 80px;
+    }
+  }
+
+  .btn_group {
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+
+    a {
+      @media (max-width: $screen-md) {
+        width: 100%;
+      }
+      &:first-child {
+        @media (max-width: $screen-md) {
+          margin-bottom: 24px;
+        }
+      }
+
+      &:nth-child(2) {
+        @media (max-width: $screen-md) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

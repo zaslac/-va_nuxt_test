@@ -1,0 +1,58 @@
+.medical_aid_partners {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+  @media (min-width: $screen-sm) {
+    gap: 40px;
+    flex-direction: row;
+  }
+
+  .medical_partner {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 40px;
+    flex: 1;
+
+    @media (min-width: $screen-sm) {
+      padding: 48px;
+    }
+
+    .logo {
+      max-height: 65px;
+      width: auto;
+      margin-bottom: 40px;
+
+    }
+
+    .title {
+      @include h2();
+      font-size: 36px;
+      color: #252525;
+      margin-bottom: 24px;
+      text-align: left;
+      line-height: 100% !important;
+
+      @media (min-width: $screen-sm) {
+        font-size: 48px;
+      }
+
+    }
+
+    .content {
+      @include font(450, 18,150%);
+      color: #252525;
+      margin-bottom: 40px;
+    }
+
+    .btn_group {
+
+      .btn {
+        padding: 14px 24px;
+      }
+
+    }
+
+  }
+
+}

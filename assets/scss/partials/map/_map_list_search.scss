@@ -1,0 +1,67 @@
+.map_list_search {
+  padding-top: 144px;
+  @media (min-width: $screen-md) {
+    padding-top: 264px;
+  }
+
+  .search_header {
+    .container {
+      padding: 0;
+      @media (min-width: $screen-md) {
+        padding: 0 24px;
+      }
+    }
+    .search_param {
+      padding: 24px;
+      @include font(400, 16, 24px);
+      letter-spacing: -0.03em;
+      color: #fff;
+      border-bottom: 2px solid #3f3f3f;
+      @media (min-width: $screen-md) {
+        padding: 24px 0;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .search_body {
+    width: 100%;
+    @media (min-width: $screen-md) {
+      max-width: 1280px;
+      padding: 0 24px;
+      margin: 0 auto;
+    }
+  }
+
+  .map_club_card {
+    border-bottom: 2px solid #3f3f3f;
+    border-radius: 0;
+  }
+
+  .club_card_inner {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+    }
+  }
+
+  .card_right {
+    @media (min-width: $screen-md) {
+      margin-left: auto;
+    }
+  }
+
+  .card_footer {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    .btn {
+      width: auto;
+      margin-right: auto;
+    }
+  }
+}

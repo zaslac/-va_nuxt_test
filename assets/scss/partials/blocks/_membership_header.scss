@@ -1,0 +1,48 @@
+.membership_header {
+  margin-top: 160px;
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 250px;
+    margin-bottom: 80px;
+  }
+
+  .sub_title {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 24px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    color: #fff;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      font-size:80px;
+    }
+  }
+
+  .content {
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+  }
+
+}

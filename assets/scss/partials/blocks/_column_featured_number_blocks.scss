@@ -1,0 +1,124 @@
+.column_featured_number_blocks {
+  margin-bottom: 80px;
+  @media (min-width: $screen-md) {
+    margin-bottom: 100px;
+  }
+  .section_title {
+    @include font(800, 48, 100%);
+    text-align: center;
+    margin-bottom: 80px;
+    color: #fff;
+    letter-spacing: -0.06em;
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+
+  .section_columns {
+    flex-wrap: wrap;
+    @media (min-width: $screen-md) {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+  }
+
+  .section_col {
+    width: 100%;
+    background: #2e2e2e;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+    @media (min-width: $screen-md) {
+      max-width: calc(50% - 16px);
+      margin: 0 8px 16px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+
+    &.col_1 {
+      &:before {
+        background-image: url(@/assets/img/numbers/1.png);
+      }
+    }
+    &.col_2 {
+      &:before {
+        background-image: url(@/assets/img/numbers/2.png);
+      }
+    }
+    &.col_3 {
+      &:before {
+        background-image: url(@/assets/img/numbers/3.png);
+      }
+    }
+    &.col_4 {
+      &:before {
+        background-image: url(@/assets/img/numbers/4.png);
+      }
+    }
+  }
+
+  .col_body {
+    padding: 56px 24px 0;
+    @media (min-width: $screen-md) {
+      padding: 80px;
+    }
+  }
+
+  .title {
+    @include font(800, 36, 100%);
+    text-align: center;
+    color: #fff;
+    letter-spacing: -0.06em;
+    margin-bottom: 24px;
+    @media (min-width: $screen-md) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  .description {
+    @include font(400, 18, 30px);
+    letter-spacing: -0.03em;
+    color: #d3d3d3;
+    text-align: center;
+    margin-bottom: 24px;
+    @media (min-width: $screen-md) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .pill {
+    @include font(500, 18, 27px);
+    letter-spacing: -0.015em;
+    color: #fff;
+    text-align: center;
+    padding: 4px 16px;
+    background: #3f3f3f;
+    border-radius: 100px;
+    margin: 0 0 8px;
+  }
+
+  .image {
+    margin-top: 16px;
+  }
+}

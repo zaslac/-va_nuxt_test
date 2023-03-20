@@ -1,0 +1,81 @@
+.club_card_list {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
+  .club_card {
+    width: 100%;
+    padding: 3px;
+    border-radius: 21px;
+    position: relative;
+    height: auto;
+    display: flex;
+
+    .card_content {
+      background: #2E2E2E;
+      border-radius: 21px;
+      padding: 40px 20px;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        height: 100%;
+        padding: 48px;
+      }
+
+      .age_group {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 8px;
+        @include font(450, 14, 100%);
+        text-transform: uppercase;
+        color: #FFF;
+        margin-bottom: 32px;
+      }
+
+      .title {
+        @include font(500, 32, 100%);
+        margin-bottom: 32px;
+        text-align: left;
+      }
+
+      .description {
+        @include font(500, 16, 150%);
+        color: #fff;
+        margin-bottom: 104px;
+      }
+
+      .list {
+        margin-bottom: 24px;
+
+        li {
+          @include font(400, 16, 150%);
+          letter-spacing: -0.03em;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+
+          .icon {
+            width: 100%;
+            max-width: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

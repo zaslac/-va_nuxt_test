@@ -1,0 +1,150 @@
+// breakpoints
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 1024px !default;
+$screen-lg: 1400px !default;
+
+$red: #eb0029;
+$black: #252525;
+$grey: #7c7c7c;
+$grey2: #d3d3d3;
+
+// @mixin font($fw:normal, $fz:16px, $lh:100%, $fontStyle:normal) {
+//     font-family: 'Pacifico', cursive;
+//     font-style: $fontStyle;
+//     font-display: swap;
+//     font-weight: $fw;
+//     font-size: $fz+px;
+//     line-height: $lh;
+// }
+
+@mixin font($fw: normal, $fz: 14, $lh: 100%) {
+  font-family: "Gotham SSm";
+  font-size: $fz + px;
+  line-height: $lh;
+  font-weight: $fw;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin h2() {
+  @include font(800, 48, 100%);
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.06em;
+  @media (min-width: $screen-md) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+@mixin h2bold() {
+  @include font(800, 48, 100%);
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.06em;
+  @media (min-width: $screen-md) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+@mixin h3() {
+  @include font(800, 36, 100%);
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.06em;
+  @media (min-width: $screen-md) {
+    font-size: 48px;
+    line-height: 100%;
+  }
+}
+
+@mixin h4() {
+  @include font(600, 36, 100%);
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.06em;
+  @media (min-width: $screen-md) {
+    font-size: 32px;
+    line-height: 100%;
+  }
+}
+
+@mixin h5() {
+  @include font(800, 14, 100%);
+  text-align: center;
+  text-transform: uppercase;
+  color: $grey;
+  margin-bottom: 24px;
+  @media (min-width: $screen-md) {
+    // font-size: 64px;
+    // line-height: 120%;
+    // letter-spacing: -0.02em;
+  }
+}
+
+@mixin p() {
+  @include font(400, 20, 30px);
+  letter-spacing: -0.03em;
+  color: $grey2;
+  text-align: center;
+  @media (min-width: $screen-md) {
+    // font-size: 64px;
+    // line-height: 120%;
+    // letter-spacing: -0.02em;
+  }
+}
+
+// MIXIN - PREFIX
+// =================================================
+@mixin prefix($property, $value, $prefixes: webkit moz ms o) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// MIXIN - ANIMATION AND KEYFRAMES
+// =================================================
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: "";
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -ms-animation: $animations;
+  animation: $animations;
+}
+
+// KEYFRAMES
+// =================================================
+@include keyframes(progress) {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,185 @@
+.btn_group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more_pad {
+  padding-top: 16px;
+  justify-content: center !important;
+}
+
+.btn {
+  @include font(600, 16, 24px);
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 100px;
+  letter-spacing: -0.06em;
+  text-align: center;
+  transition: ease all 0.3s;
+  text-decoration: none !important;
+
+  @media (min-width: $screen-md) {
+    white-space: nowrap;
+    padding: 14px 24px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button_icon {
+      width: 100%;
+      max-width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:nth-child(2) {
+    margin-left: 16px;
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
+    }
+  }
+
+  &.btn_white_text {
+    color: #fff;
+  }
+
+  &.btn_black_text {
+    color: $black;
+  }
+
+  &.btn_red_outline {
+    border: 2px solid $red;
+
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.08)
+        ),
+        #eb0029;
+      border: 2px solid transparent;
+      &.btn_black_text {
+        color: #fff;
+      }
+    }
+  }
+
+  &.btn_grey_outline {
+    border: 2px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(2px);
+
+    &:hover {
+      border-color: #fff;
+      background: #fff;
+
+      &.btn_white_text {
+        color: $black;
+      }
+    }
+  }
+
+  &.btn_dark_grey_outline {
+    border: 2px solid rgba(37, 37, 37, 0.24);
+    backdrop-filter: blur(2px);
+
+    &:hover {
+      background: rgba(37, 37, 37, 0.24);
+
+      &.btn_white_text {
+        color: #fff;
+      }
+
+      &.btn_black_text {
+        color: #fff;
+      }
+    }
+  }
+
+  &.btn_transparent_white_outline {
+    border: 2px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(2px);
+
+    &:hover {
+      color: #fff;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.08)
+        ),
+        #ffffff;
+      backdrop-filter: blur(2px);
+
+      &.btn_white_text {
+        color: $black;
+      }
+    }
+  }
+
+  &.btn_red_background {
+    background: $red;
+    border: 2px solid $red;
+
+    &:hover {
+      border: 2px solid transparent;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.08)
+        ),
+        #eb0029;
+    }
+  }
+  &.btn_black_background {
+    border: 2px solid $black;
+    background: $black;
+
+    &:hover {
+      border: 2px solid #fff;
+      background: #fff;
+
+      &.btn_white_text {
+        color: $black;
+      }
+    }
+  }
+
+  &.btn_white_background {
+    border: 2px solid #fff;
+    background: #fff;
+
+    &:hover {
+      border: 2px solid transparent;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.08)
+        ),
+        #ffffff;
+    }
+  }
+}
+
+.single_button {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+
+  .btn {
+    width: auto !important;
+  }
+
+  &.more_pad {
+    justify-content: center !important;
+  }
+}

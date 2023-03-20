@@ -1,0 +1,12 @@
+.blog_cta_block {
+  .small_desc {
+    @include font(400, 20, 30px);
+    color: $grey2;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .btn_group {
+    justify-content: flex-start;
+  }
+}

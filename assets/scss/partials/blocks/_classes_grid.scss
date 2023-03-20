@@ -1,0 +1,24 @@
+.classes_grid {
+  .section_classes_grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .class_grid_holder {
+    margin-bottom: 140px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 260px;
+    }
+
+    .class_category_grid_col {
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+}

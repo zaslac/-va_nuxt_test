@@ -1,0 +1,43 @@
+.blog_landing_list {
+  padding: 40px 0 80px;
+  @media (min-width: $screen-md) {
+    padding: 80px 0 100px;
+  }
+
+  .container {
+    @media (min-width: $screen-md) {
+      padding: 4px;
+    }
+  }
+  .blog_article_main {
+    display: flex;
+    flex-wrap: wrap;
+
+    .article {
+      width: 100%;
+      position: relative;
+      @media (min-width: $screen-md) {
+        max-width: calc(33.333% - 40px);
+        margin: 0 20px;
+      }
+
+      &:nth-child(1) {
+        @media (min-width: $screen-md) {
+          max-width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        @media (min-width: $screen-md) {
+          max-width: calc(50% - 40px);
+        }
+      }
+
+      &:nth-child(3) {
+        @media (min-width: $screen-md) {
+          max-width: calc(50% - 40px);
+        }
+      }
+    }
+  }
+}
